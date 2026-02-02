@@ -1,5 +1,6 @@
 package com.example.pivech3
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -36,10 +37,32 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Apply the status bar inset to the app bar so the toolbar renders under the status bar.
-        // This also avoids the "black" placeholder area created by fitsSystemWindows.
+        // Note: when the app bar is hidden (fullscreen video), we must NOT keep top padding here,
+        // otherwise it will look like a large blank bar in landscape.
         ViewCompat.setOnApplyWindowInsetsListener(binding.appBarMain.appBarLayout) { view, insets ->
             val statusBarInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
-            view.setPadding(view.paddingLeft, statusBarInsets.top, view.paddingRight, view.paddingBottom)
+            val shouldPad = view.visibility == View.VISIBLE
+            view.setPadding(
+                view.paddingLeft,
+                if (shouldPad) statusBarInsets.top else 0,
+                view.paddingRight,
+                view.paddingBottom
+            )
+            insets
+        }
+
+        // Apply system bar insets to the NavHost content only when NOT in fullscreen video.
+        // In fullscreen video we draw edge-to-edge and hide system bars.
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
+            val navHost = findViewById<View>(R.id.nav_host_fragment_content_main)
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            val isVideoPage = binding.appBarMain.appBarLayout.visibility != View.VISIBLE
+            navHost.setPadding(
+                navHost.paddingLeft,
+                if (isVideoPage) 0 else systemBars.top,
+                navHost.paddingRight,
+                if (isVideoPage) 0 else systemBars.bottom
+            )
             insets
         }
 
@@ -104,6 +127,13 @@ class MainActivity : AppCompatActivity() {
         binding.appBarMain.appBarLayout.visibility = if (enabled) View.GONE else View.VISIBLE
         binding.appBarMain.fab.visibility = if (enabled) View.GONE else View.VISIBLE
 
+        // 1) Auto landscape while on Control page.
+        requestedOrientation = if (enabled) {
+            ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
+        } else {
+            ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+        }
+
         val controller = WindowInsetsControllerCompat(window, window.decorView)
         if (enabled) {
             controller.systemBarsBehavior =
@@ -112,6 +142,9 @@ class MainActivity : AppCompatActivity() {
         } else {
             controller.show(WindowInsetsCompat.Type.systemBars())
         }
+
+        // Re-apply insets after toggling visibilities/orientation.
+        ViewCompat.requestApplyInsets(binding.root)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

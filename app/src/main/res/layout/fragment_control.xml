@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.control.ControlFragment">
+    tools:context="com.example.pivech3.ui.control.ControlFragment">
 
     <androidx.media3.ui.PlayerView
         android:id="@+id/player_view"
@@ -12,6 +12,7 @@
         android:layout_height="0dp"
         android:keepScreenOn="true"
         app:use_controller="false"
+        app:resize_mode="zoom"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

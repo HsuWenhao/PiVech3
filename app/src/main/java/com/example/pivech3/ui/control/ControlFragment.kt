@@ -13,6 +13,8 @@ import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.DefaultLoadControl
+import androidx.media3.exoplayer.trackselection.DefaultTrackSelector
 import androidx.media3.exoplayer.rtsp.RtspMediaSource
 import com.example.pivech3.databinding.FragmentControlBinding
 import com.example.pivech3.prefs.AppPreferences
@@ -29,9 +31,14 @@ class ControlFragment : Fragment() {
     private val maxRetries = 5
     private val retryDelayMs = 1500L
 
+    private var isStarted = false
+
     private val playerListener = object : Player.Listener {
         @UnstableApi
         override fun onPlayerError(error: PlaybackException) {
+            // Avoid retrying if the fragment is not in foreground.
+            if (!isAdded || !isStarted) return
+
             // Basic user feedback + auto retry.
             Toast.makeText(
                 requireContext(),
@@ -56,8 +63,21 @@ class ControlFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.playerView.useController = false
+        binding.playerView.keepScreenOn = true
 
         startPlayback()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        isStarted = true
+    }
+
+    override fun onStop() {
+        super.onStop()
+        isStarted = false
+        mainHandler.removeCallbacksAndMessages(null)
+        player?.pause()
     }
 
     @UnstableApi
@@ -67,7 +87,29 @@ class ControlFragment : Fragment() {
         // Read RTSP URL from Settings.
         val rtspUrl = AppPreferences.getRtspUrl(context).trim().ifEmpty { AppPreferences.DEFAULT_RTSP_URL }
 
-        val newPlayer = ExoPlayer.Builder(context).build()
+        val trackSelector = DefaultTrackSelector(context).apply {
+            // Prefer more stable playback on weaker devices/networks.
+            parameters = buildUponParameters()
+                .setForceLowestBitrate(true)
+                .build()
+        }
+
+        val loadControl = DefaultLoadControl.Builder()
+            // RTSP can be bursty; give a bit more buffer to reduce stutter.
+            .setBufferDurationsMs(
+                /* minBufferMs = */ 1500,
+                /* maxBufferMs = */ 6000,
+                /* bufferForPlaybackMs = */ 250,
+                /* bufferForPlaybackAfterRebufferMs = */ 500
+            )
+            .build()
+
+        val newPlayer = ExoPlayer.Builder(context)
+            .setTrackSelector(trackSelector)
+            .setLoadControl(loadControl)
+            .setHandleAudioBecomingNoisy(true)
+            .build()
+
         player = newPlayer
         binding.playerView.player = newPlayer
 
@@ -84,7 +126,7 @@ class ControlFragment : Fragment() {
 
     @UnstableApi
     private fun scheduleRetry() {
-        if (!isAdded) return
+        if (!isAdded || !isStarted) return
         if (retryCount >= maxRetries) {
             Toast.makeText(requireContext(), "重连失败，请检查 RTSP 地址/网络", Toast.LENGTH_LONG).show()
             return
@@ -92,7 +134,7 @@ class ControlFragment : Fragment() {
         retryCount += 1
         mainHandler.removeCallbacksAndMessages(null)
         mainHandler.postDelayed({
-            if (!isAdded) return@postDelayed
+            if (!isAdded || !isStarted) return@postDelayed
             restartPlayback()
         }, retryDelayMs)
     }
@@ -108,10 +150,6 @@ class ControlFragment : Fragment() {
         startPlayback()
     }
 
-    override fun onStop() {
-        super.onStop()
-        player?.pause()
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()
