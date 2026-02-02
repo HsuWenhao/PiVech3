@@ -51,9 +51,21 @@ class HomeFragment : Fragment() {
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
                 val value = seekBar?.progress ?: 0
-                Toast.makeText(requireContext(), getString(R.string.slider_value_alert, value), Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    requireContext(),
+                    getString(R.string.slider_value_alert, value),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         })
+
+        // Joystick + live value label
+        val joystickValueLabel = binding.joystickValueLabel
+        joystickValueLabel.text = getString(R.string.joystick_value, 0f, 0f)
+        binding.joystickView.setOnMoveListener { x, y ->
+            joystickValueLabel.text = getString(R.string.joystick_value, x, y)
+        }
+
         return root
     }
 
