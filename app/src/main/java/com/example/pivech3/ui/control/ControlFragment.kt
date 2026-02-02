@@ -1,4 +1,4 @@
-package com.example.pivech3.ui.gallery
+package com.example.pivech3.ui.control
 
 import android.os.Bundle
 import android.os.Handler
@@ -14,12 +14,12 @@ import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.rtsp.RtspMediaSource
-import com.example.pivech3.databinding.FragmentGalleryBinding
+import com.example.pivech3.databinding.FragmentControlBinding
 import com.example.pivech3.prefs.AppPreferences
 
-class GalleryFragment : Fragment() {
+class ControlFragment : Fragment() {
 
-    private var _binding: FragmentGalleryBinding? = null
+    private var _binding: FragmentControlBinding? = null
     private val binding get() = _binding!!
 
     private var player: ExoPlayer? = null
@@ -47,7 +47,7 @@ class GalleryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = FragmentControlBinding.inflate(inflater, container, false)
         return binding.root
     }
 

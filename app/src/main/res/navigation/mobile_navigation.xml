@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/nav_control"
-        android:name="com.example.pivech3.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:name="com.example.pivech3.ui.control.ControlFragment"
+        android:label="@string/menu_control"
+        tools:layout="@layout/fragment_control" />
 
     <fragment
         android:id="@+id/nav_slideshow"

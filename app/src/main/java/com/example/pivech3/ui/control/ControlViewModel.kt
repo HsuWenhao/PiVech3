@@ -1,13 +1,13 @@
-package com.example.pivech3.ui.gallery
+package com.example.pivech3.ui.control
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class GalleryViewModel : ViewModel() {
+class ControlViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is gallery Fragment"
+        value = "This is control Fragment"
     }
     val text: LiveData<String> = _text
 }
