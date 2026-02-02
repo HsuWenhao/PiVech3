@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.PiVech3.AppBarOverlay">
@@ -29,6 +30,8 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:contentDescription="@string/cd_fab"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        tools:ignore="ContentDescription" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

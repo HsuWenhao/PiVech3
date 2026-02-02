@@ -3,16 +3,19 @@ package com.example.pivech3
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
 import com.example.pivech3.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationView
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,8 +25,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Immersive status bar (沉浸式状态栏):
+        // - status bar is transparent (set in theme)
+        // - content is allowed to draw behind system bars
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Apply the status bar inset to the app bar so the toolbar renders under the status bar.
+        // This also avoids the "black" placeholder area created by fitsSystemWindows.
+        ViewCompat.setOnApplyWindowInsetsListener(binding.appBarMain.appBarLayout) { view, insets ->
+            val statusBarInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+            view.setPadding(view.paddingLeft, statusBarInsets.top, view.paddingRight, view.paddingBottom)
+            insets
+        }
 
         setSupportActionBar(binding.appBarMain.toolbar)
 

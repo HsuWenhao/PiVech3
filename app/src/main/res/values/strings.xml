@@ -14,4 +14,5 @@
     <string name="slider_value_alert">当前数值: %1$d</string>
     <string name="joystick">Joystick</string>
     <string name="joystick_value">Joystick: x=%1$.2f, y=%2$.2f</string>
+    <string name="cd_fab">Action</string>
 </resources>

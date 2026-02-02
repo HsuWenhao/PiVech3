@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.PiVech3" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -17,6 +17,13 @@
     <style name="Theme.PiVech3.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Immersive status bar: status bar is transparent and content is laid out behind it. -->
+    <style name="Theme.PiVech3.Immersive" parent="Theme.PiVech3.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!-- Let content extend into system bars (paired with WindowCompat.setDecorFitsSystemWindows(window, false)) -->
+        <item name="android:windowTranslucentStatus">false</item>
     </style>
 
     <style name="Theme.PiVech3.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
