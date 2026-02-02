@@ -31,7 +31,6 @@
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/cd_fab"
-        app:srcCompat="@android:drawable/ic_dialog_email"
-        tools:ignore="ContentDescription" />
+        app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

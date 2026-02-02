@@ -5,4 +5,11 @@
         android:title="树莓派局域网IP"
         android:summary="请输入树莓派的局域网IP地址"
         android:inputType="text" />
+
+    <EditTextPreference
+        android:key="rtsp_url"
+        android:title="RTSP 推流地址"
+        android:summary="请输入 RTSP 地址，例如 rtsp://192.168.1.10:8554/wmv"
+        android:defaultValue="rtsp://192.168.1.10:8554/wmv"
+        android:inputType="textUri" />
 </PreferenceScreen>

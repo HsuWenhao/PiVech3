@@ -3,10 +3,12 @@ package com.example.pivech3
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -61,6 +63,15 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+        // Fullscreen RTSP playback mode on the video page (nav_control).
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            val isVideoPage = destination.id == R.id.nav_control
+            setVideoFullscreenMode(isVideoPage)
+            drawerLayout.setDrawerLockMode(
+                if (isVideoPage) DrawerLayout.LOCK_MODE_LOCKED_CLOSED else DrawerLayout.LOCK_MODE_UNLOCKED
+            )
+        }
+
         navView.setNavigationItemSelectedListener { menuItem ->
             val navController = findNavController(R.id.nav_host_fragment_content_main)
             when (menuItem.itemId) {
@@ -86,6 +97,20 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+        }
+    }
+
+    private fun setVideoFullscreenMode(enabled: Boolean) {
+        binding.appBarMain.appBarLayout.visibility = if (enabled) View.GONE else View.VISIBLE
+        binding.appBarMain.fab.visibility = if (enabled) View.GONE else View.VISIBLE
+
+        val controller = WindowInsetsControllerCompat(window, window.decorView)
+        if (enabled) {
+            controller.systemBarsBehavior =
+                WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+            controller.hide(WindowInsetsCompat.Type.systemBars())
+        } else {
+            controller.show(WindowInsetsCompat.Type.systemBars())
         }
     }
 

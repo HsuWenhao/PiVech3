@@ -8,8 +8,12 @@ import com.example.pivech3.R
 class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
-        // 显示当前IP值为summary
-        val ipPref = findPreference<EditTextPreference>("raspberry_pi_ip")
-        ipPref?.summaryProvider = EditTextPreference.SimpleSummaryProvider.getInstance()
+
+        // 显示当前值为 summary
+        findPreference<EditTextPreference>("raspberry_pi_ip")
+            ?.summaryProvider = EditTextPreference.SimpleSummaryProvider.getInstance()
+
+        findPreference<EditTextPreference>("rtsp_url")
+            ?.summaryProvider = EditTextPreference.SimpleSummaryProvider.getInstance()
     }
 }
