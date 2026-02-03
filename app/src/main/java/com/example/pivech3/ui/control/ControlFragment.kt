@@ -8,9 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.pivech3.databinding.FragmentControlBinding
 import com.example.pivech3.prefs.AppPreferences
+import kotlin.math.hypot
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -69,6 +73,14 @@ class ControlFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Keep overlays above system bars (gesture nav, cutouts)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.controlRoot) { _, insets ->
+            val sys = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            // Keep video full-bleed. Only pad overlay margins via root padding.
+            binding.controlRoot.setPadding(sys.left, sys.top, sys.right, sys.bottom)
+            insets
+        }
+
         // Init renderer early (view lifecycle) so we can attach the remote track as soon as it arrives.
         // NOTE: stream-webrtc-android exposes the same org.webrtc APIs.
         val egl = eglBase ?: EglBase.create().also { eglBase = it }
@@ -78,6 +90,28 @@ class ControlFragment : Fragment() {
         binding.webrtcView.setMirror(false)
         binding.webrtcView.init(egl.eglBaseContext, null)
         binding.webrtcView.setScalingType(org.webrtc.RendererCommon.ScalingType.SCALE_ASPECT_FILL)
+
+        // Left joystick (independent)
+        binding.leftJoystick.setOnMoveListener { x, y ->
+            // TODO: hook into your control channel. For now we just log magnitude.
+            val mag = hypot(x.toDouble(), y.toDouble()).toFloat()
+            Log.d("ControlFragment", "leftJoystick x=$x y=$y |v|=$mag")
+        }
+
+        // Right joystick (independent)
+        binding.rightJoystick.setOnMoveListener { x, y ->
+            val mag = hypot(x.toDouble(), y.toDouble()).toFloat()
+            Log.d("ControlFragment", "rightJoystick x=$x y=$y |v|=$mag")
+        }
+
+        binding.exitButton.setOnClickListener {
+            // Prefer navigation back; fallback to finishing the activity.
+            runCatching {
+                findNavController().popBackStack()
+            }.getOrElse {
+                requireActivity().finish()
+            }
+        }
     }
 
     override fun onStart() {

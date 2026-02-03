@@ -2,15 +2,22 @@
     <!-- Base application theme. -->
     <style name="Theme.PiVech3" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/app_primary</item>
+        <item name="colorPrimaryVariant">@color/app_primary_variant</item>
+        <item name="colorOnPrimary">@color/app_on_primary</item>
+
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
+        <item name="colorSecondary">@color/app_secondary</item>
+        <item name="colorSecondaryVariant">@color/app_secondary_variant</item>
+        <item name="colorOnSecondary">@color/app_on_secondary</item>
+
+        <!-- Optional surface defaults (nice with white primary) -->
+        <item name="colorSurface">@color/app_surface</item>
+        <item name="colorOnSurface">@color/app_on_surface</item>
+
+        <!-- Status bar: transparent + light icons (because content behind is light) -->
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -24,9 +31,12 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <!-- Let content extend into system bars (paired with WindowCompat.setDecorFitsSystemWindows(window, false)) -->
         <item name="android:windowTranslucentStatus">false</item>
+        <!-- Ensure light status bar icons in immersive mode as well -->
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
-    <style name="Theme.PiVech3.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <!-- App bar overlay: switch to LIGHT so toolbar text/icons become dark on white background -->
+    <style name="Theme.PiVech3.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
 
     <style name="Theme.PiVech3.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

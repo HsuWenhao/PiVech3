@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/controlRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.pivech3.ui.control.ControlFragment">
@@ -16,5 +17,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:background="#000" />
+
+    <com.example.pivech3.ui.home.JoystickView
+        android:id="@+id/leftJoystick"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:alpha="0.55"
+        android:contentDescription="@string/joystick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp" />
+
+    <com.example.pivech3.ui.home.JoystickView
+        android:id="@+id/rightJoystick"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:alpha="0.55"
+        android:contentDescription="@string/joystick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exitButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="✕"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
