@@ -42,6 +42,8 @@ class ControlFragment : Fragment() {
     private var peerConnectionFactory: PeerConnectionFactory? = null
     private var peerConnection: PeerConnection? = null
 
+    private var remoteVideoTrack: VideoTrack? = null
+
     // Public stream URL (browser player). Read from Settings.
     private val streamUrl: String by lazy {
         val ctx = requireContext().applicationContext
@@ -55,8 +57,6 @@ class ControlFragment : Fragment() {
 
     private var isStarted = false
 
-    private var hasShownConnectedToast = false
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -68,9 +68,16 @@ class ControlFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // Init renderer early (view lifecycle) so we can attach the remote track as soon as it arrives.
+        // NOTE: stream-webrtc-android exposes the same org.webrtc APIs.
+        val egl = eglBase ?: EglBase.create().also { eglBase = it }
+
         binding.webrtcView.keepScreenOn = true
         binding.webrtcView.setEnableHardwareScaler(true)
         binding.webrtcView.setMirror(false)
+        binding.webrtcView.init(egl.eglBaseContext, null)
+        binding.webrtcView.setScalingType(org.webrtc.RendererCommon.ScalingType.SCALE_ASPECT_FILL)
     }
 
     override fun onStart() {
@@ -83,12 +90,12 @@ class ControlFragment : Fragment() {
         super.onStop()
         isStarted = false
         mainHandler.removeCallbacksAndMessages(null)
-        stopWebRtc()
+        stopWebRtc(releaseRenderer = false)
     }
 
     override fun onDestroyView() {
         mainHandler.removeCallbacksAndMessages(null)
-        stopWebRtc()
+        stopWebRtc(releaseRenderer = true)
         super.onDestroyView()
         _binding = null
     }
@@ -108,15 +115,15 @@ class ControlFragment : Fragment() {
                 .createInitializationOptions()
         )
 
-        eglBase = EglBase.create()
-        val eglContext = eglBase!!.eglBaseContext
+        val egl = eglBase ?: EglBase.create().also { eglBase = it }
+        val eglContext = egl.eglBaseContext
 
         peerConnectionFactory = PeerConnectionFactory.builder()
             .setVideoEncoderFactory(DefaultVideoEncoderFactory(eglContext, true, true))
             .setVideoDecoderFactory(DefaultVideoDecoderFactory(eglContext))
             .createPeerConnectionFactory()
 
-        binding.webrtcView.init(eglContext, null)
+        // Renderer init moved to onViewCreated() to match view lifecycle.
     }
 
     private fun parseBaseAndPath(): Pair<String, String> {
@@ -135,11 +142,6 @@ class ControlFragment : Fragment() {
             listOf(PeerConnection.IceServer.builder("stun:stun.l.google.com:19302").createIceServer())
         ).apply {
             sdpSemantics = PeerConnection.SdpSemantics.UNIFIED_PLAN
-
-            // Reduce background network churn; these flags are safe defaults for receive-only.
-            continualGatheringPolicy = PeerConnection.ContinualGatheringPolicy.GATHER_ONCE
-            tcpCandidatePolicy = PeerConnection.TcpCandidatePolicy.DISABLED
-            candidateNetworkPolicy = PeerConnection.CandidateNetworkPolicy.LOW_COST
         }
 
         peerConnection = factory.createPeerConnection(rtcConfig, object : PeerConnection.Observer {
@@ -169,16 +171,15 @@ class ControlFragment : Fragment() {
             ) {
                 val track = receiver?.track()
                 if (track is VideoTrack) {
-                    track.addSink(binding.webrtcView)
+                    // WebRTC callbacks are not guaranteed to run on the main thread.
+                    mainHandler.post {
+                        if (!isAdded || !isStarted) return@post
+                        val renderer = _binding?.webrtcView ?: return@post
 
-                    if (!hasShownConnectedToast) {
-                        hasShownConnectedToast = true
-                        mainHandler.post {
-                            if (isAdded) {
-                                Toast.makeText(requireContext(), "WebRTC 已连接", Toast.LENGTH_SHORT)
-                                    .show()
-                            }
-                        }
+                        // Replace existing track sink if renegotiation happens.
+                        remoteVideoTrack?.removeSink(renderer)
+                        remoteVideoTrack = track
+                        track.addSink(renderer)
                     }
                 }
             }
@@ -295,18 +296,46 @@ class ControlFragment : Fragment() {
     }
 
     private fun postIceCandidatesBatch(sessionUrl: String, candidates: List<IceCandidate>) {
-        // Disabled: avoid JNI metrics crash in some WebRTC builds triggered from network_thread.
-        // MediaMTX typically provides enough ICE candidates in the answer for LAN scenarios.
-        return
+        val frag = buildString {
+            for (c in candidates) {
+                append("a=candidate:")
+                append(c.sdp.removePrefix("candidate:"))
+                append("\r\n")
+            }
+        }
+
+        val req = Request.Builder()
+            .url(sessionUrl)
+            .patch(frag.toRequestBody("application/trickle-ice-sdpfrag".toMediaType()))
+            .build()
+
+        http.newCall(req).enqueue(object : okhttp3.Callback {
+            override fun onFailure(call: okhttp3.Call, e: java.io.IOException) {
+                Log.d("ControlFragment", "ICE batch PATCH failed: ${e.message}")
+            }
+
+            override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
+                response.close()
+            }
+        })
     }
 
-    private fun stopWebRtc() {
+    private fun stopWebRtc(releaseRenderer: Boolean) {
         sessionUrl = null
         synchronized(pendingIceCandidates) {
             pendingIceCandidates.clear()
         }
 
         val renderer = _binding?.webrtcView
+
+        // Detach sinks first to avoid frames being delivered into a released surface.
+        try {
+            remoteVideoTrack?.let { track ->
+                if (renderer != null) track.removeSink(renderer)
+            }
+        } catch (_: Throwable) {
+        }
+        remoteVideoTrack = null
 
         try {
             renderer?.clearImage()
@@ -317,17 +346,17 @@ class ControlFragment : Fragment() {
         peerConnection?.dispose()
         peerConnection = null
 
-        try {
-            renderer?.release()
-        } catch (_: Throwable) {
-        }
+        if (releaseRenderer) {
+            try {
+                renderer?.release()
+            } catch (_: Throwable) {
+            }
 
-        eglBase?.release()
-        eglBase = null
+            eglBase?.release()
+            eglBase = null
+        }
 
         peerConnectionFactory?.dispose()
         peerConnectionFactory = null
-
-        hasShownConnectedToast = false
     }
 }

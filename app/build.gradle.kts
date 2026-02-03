@@ -50,8 +50,11 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.preference)
 
-    // WebRTC playback (MediaMTX WHEP)
-    implementation("com.github.webrtc-sdk:android:104.5112.06")
+    // WebRTC playback
+    implementation("io.getstream:stream-webrtc-android:1.3.9") {
+        // Avoid potential duplicate/older WebRTC artifacts dragged transitively.
+        exclude(group = "org.webrtc")
+    }
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
     testImplementation(libs.junit)
