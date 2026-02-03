@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PiV 3.0</string>
+
+    <string name="navigation_drawer_open">打开侧边栏</string>
+    <string name="navigation_drawer_close">关闭侧边栏</string>
+
+    <string name="nav_header_title">PiV 3.0</string>
+    <string name="nav_header_subtitle">noodleportal@foxmail.com</string>
+    <string name="nav_header_desc">侧边栏头部</string>
+
+    <string name="action_settings">设置</string>
+
+    <string name="menu_home">主页</string>
+    <string name="menu_control">控制</string>
+    <string name="menu_slideshow">演示</string>
+
+    <string name="slider_value">数值：%1$d</string>
+    <string name="slider_value_alert">当前数值：%1$d</string>
+
+    <string name="joystick">摇杆</string>
+    <string name="joystick_value">摇杆：x=%1$.2f，y=%2$.2f</string>
+
+    <string name="cd_fab">操作</string>
+
+    <string name="joystick_vector_title">摇杆向量</string>
+    <string name="joystick_vector_value">向量：|v|=%1$.2f</string>
+    <string name="joystick_x_value">x：%1$.2f</string>
+    <string name="joystick_y_value">y：%1$.2f</string>
+
+    <string name="exit">退出</string>
+
+    <!-- Settings / Preferences -->
+    <string name="pref_raspberry_pi_ip_title">树莓派局域网 IP</string>
+    <string name="pref_raspberry_pi_ip_summary">请输入树莓派的局域网 IP 地址</string>
+
+    <string name="pref_webrtc_url_title">WebRTC 播放地址</string>
+    <string name="pref_webrtc_url_summary">请输入 WebRTC 播放地址，例如 http://192.168.1.3:8889/wmv</string>
+    <string name="pref_webrtc_url_default">http://192.168.1.3:8889/wmv</string>
+</resources>
