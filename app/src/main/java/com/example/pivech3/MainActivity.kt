@@ -2,14 +2,17 @@ package com.example.pivech3
 
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.view.GestureDetector
 import android.view.Menu
 import android.view.MenuItem
+import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.core.view.isVisible
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -19,11 +22,16 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.pivech3.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
+import kotlin.math.abs
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+
+    private var drawerSwipeEnabled: Boolean = true
+    private lateinit var drawerGestureDetector: GestureDetector
+    private var horizontalDragAccumulatedPx: Float = 0f
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         // otherwise it will look like a large blank bar in landscape.
         ViewCompat.setOnApplyWindowInsetsListener(binding.appBarMain.appBarLayout) { view, insets ->
             val statusBarInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
-            val shouldPad = view.visibility == View.VISIBLE
+            val shouldPad = view.isVisible
             view.setPadding(
                 view.paddingLeft,
                 if (shouldPad) statusBarInsets.top else 0,
@@ -76,6 +84,105 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
+
+        // Enable a full-screen swipe gesture to open/close the drawer.
+        // This implementation is *interruptible*: switching direction while the drawer is animating
+        // will immediately reverse it (closing -> opening, opening -> closing).
+        drawerGestureDetector = GestureDetector(
+            this,
+            object : GestureDetector.SimpleOnGestureListener() {
+                override fun onDown(e: MotionEvent): Boolean {
+                    horizontalDragAccumulatedPx = 0f
+                    return true
+                }
+
+                override fun onScroll(
+                    e1: MotionEvent?,
+                    e2: MotionEvent,
+                    distanceX: Float,
+                    distanceY: Float
+                ): Boolean {
+                    if (!drawerSwipeEnabled) return false
+
+                    // distanceX: >0 means moving left, <0 means moving right.
+                    val dx = -distanceX
+                    horizontalDragAccumulatedPx += dx
+
+                    // Ignore mostly-vertical scrolls.
+                    if (abs(horizontalDragAccumulatedPx) < abs(-distanceY) * 1.2f) return false
+
+                    val openThresholdPx = 80f
+                    val closeThresholdPx = 80f
+
+                    // Right swipe: open drawer (even if currently closing / settling).
+                    if (horizontalDragAccumulatedPx > openThresholdPx) {
+                        horizontalDragAccumulatedPx = 0f
+                        if (!drawerLayout.isDrawerOpen(navView)) {
+                            drawerLayout.openDrawer(navView)
+                            return true
+                        }
+                    }
+
+                    // Left swipe: close drawer (even if currently opening / settling).
+                    if (horizontalDragAccumulatedPx < -closeThresholdPx) {
+                        horizontalDragAccumulatedPx = 0f
+                        if (drawerLayout.isDrawerOpen(navView)) {
+                            drawerLayout.closeDrawer(navView)
+                            return true
+                        }
+                    }
+
+                    return false
+                }
+
+                override fun onFling(
+                    e1: MotionEvent?,
+                    e2: MotionEvent,
+                    velocityX: Float,
+                    velocityY: Float
+                ): Boolean {
+                    if (!drawerSwipeEnabled) return false
+
+                    // Keep a fling fallback for quick swipes.
+                    val start = e1 ?: return false
+                    val dx = e2.x - start.x
+                    val dy = e2.y - start.y
+
+                    val minDx = 120f
+                    val maxDy = 240f
+                    val minVelocityX = 300f
+
+                    if (abs(dy) > maxDy) return false
+                    if (abs(velocityX) <= abs(velocityY)) return false
+
+                    return when {
+                        dx > minDx && velocityX > minVelocityX -> {
+                            if (!drawerLayout.isDrawerOpen(navView)) {
+                                drawerLayout.openDrawer(navView)
+                                true
+                            } else false
+                        }
+                        dx < -minDx && velocityX < -minVelocityX -> {
+                            if (drawerLayout.isDrawerOpen(navView)) {
+                                drawerLayout.closeDrawer(navView)
+                                true
+                            } else false
+                        }
+                        else -> false
+                    }
+                }
+            }
+        )
+
+        // Attach the detector to the content (NavHost). This makes the gesture work full-screen.
+        findViewById<View>(R.id.nav_host_fragment_content_main).setOnTouchListener { v, event ->
+            val handled = drawerGestureDetector.onTouchEvent(event)
+            if (handled && event.action == MotionEvent.ACTION_UP) {
+                v.performClick()
+            }
+            handled
+        }
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
@@ -89,10 +196,18 @@ class MainActivity : AppCompatActivity() {
         // Fullscreen RTSP playback mode on the video page (nav_control).
         navController.addOnDestinationChangedListener { _, destination, _ ->
             val isVideoPage = destination.id == R.id.nav_control
+            drawerSwipeEnabled = !isVideoPage
+
             setVideoFullscreenMode(isVideoPage)
+
+            // Keep DrawerLayout edge-swipe behavior consistent too.
             drawerLayout.setDrawerLockMode(
                 if (isVideoPage) DrawerLayout.LOCK_MODE_LOCKED_CLOSED else DrawerLayout.LOCK_MODE_UNLOCKED
             )
+            if (isVideoPage) {
+                // If user navigates to Control while drawer is open, close it to keep fullscreen clean.
+                drawerLayout.closeDrawers()
+            }
         }
 
         navView.setNavigationItemSelectedListener { menuItem ->
