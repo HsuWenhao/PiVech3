@@ -50,10 +50,9 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.preference)
 
-    // RTSP video playback (Media3 / ExoPlayer)
-    implementation(libs.androidx.media3.exoplayer)
-    implementation(libs.androidx.media3.exoplayer.rtsp)
-    implementation(libs.androidx.media3.ui)
+    // WebRTC playback (MediaMTX WHEP)
+    implementation("com.github.webrtc-sdk:android:104.5112.06")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

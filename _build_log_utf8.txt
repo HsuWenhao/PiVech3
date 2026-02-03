@@ -1,0 +1,1242 @@
+﻿Initialized native services in: C:\Users\16683\.gradle\native
+Initialized jansi services in: C:\Users\16683\.gradle\native
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Starting process 'Gradle build daemon'. Working directory: C:\Users\16683\.gradle\daemon\8.13 Command: C:\Program Files\Android\Android Studio\jbr\bin\java.exe --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.xml/javax.xml.namespace=ALL-UNNAMED -Xmx2048m -Dfile.encoding=UTF-8 -Duser.country=CN -Duser.language=zh -Duser.variant -cp C:\Users\16683\.gradle\wrapper\dists\gradle-8.13-bin\5xuhj0ry160q40clulazy9h7d\gradle-8.13\lib\gradle-daemon-main-8.13.jar -javaagent:C:\Users\16683\.gradle\wrapper\dists\gradle-8.13-bin\5xuhj0ry160q40clulazy9h7d\gradle-8.13\lib\agents\gradle-instrumentation-agent-8.13.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 8.13
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 1.881 secs.
+The client will now receive all logging from the daemon (pid: 33228). The daemon log file: C:\Users\16683\.gradle\daemon\8.13\daemon-33228.out.log
+Daemon will be stopped at the end of the build 
+Using 16 worker leases.
+Received JVM installation metadata from 'C:\Program Files\Android\Android Studio\jbr': {JAVA_HOME=C:\Program Files\Android\Android Studio\jbr, JAVA_VERSION=21.0.8, JAVA_VENDOR=JetBrains s.r.o., RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.8+-14196175-b1038.72, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.8+-14196175-b1038.72, VM_VENDOR=JetBrains s.r.o., OS_ARCH=amd64}
+Watching the file system is configured to be enabled if available
+Now considering [C:\Users\16683\AndroidStudioProjects\PiVech3] as hierarchies to watch
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'C:\Users\16683\AndroidStudioProjects\PiVech3\settings.gradle.kts'.
+Projects loaded. Root project using build file 'C:\Users\16683\AndroidStudioProjects\PiVech3\build.gradle.kts'.
+Included projects: [root project 'PiVech3', project ':app']
+
+> Configure project :
+Evaluating root project 'PiVech3' using build file 'C:\Users\16683\AndroidStudioProjects\PiVech3\build.gradle.kts'.
+Resolved plugin [id: 'com.android.application', version: '8.13.2', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.0.21', apply: false]
+
+> Configure project :app
+Evaluating project ':app' using build file 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build.gradle.kts'.
+Resolved plugin [id: 'com.android.application', version: '8.13.2']
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.0.21']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle85 variant
+All projects evaluated.
+Task name matched 'clean'
+Task path ':app:assembleDebug' matched project ':app'
+Task name matched 'assembleDebug'
+Selected primary task 'clean' from project :
+Selected primary task 'assembleDebug' from project :app
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileDebugKotlin
+Tasks to be executed: [task ':app:clean', task ':app:preBuild', task ':app:preDebugBuild', task ':app:mergeDebugNativeDebugMetadata', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:dataBindingMergeDependencyArtifactsDebug', task ':app:generateDebugResValues', task ':app:generateDebugResources', task ':app:mergeDebugResources', task ':app:packageDebugResources', task ':app:processDebugNavigationResources', task ':app:parseDebugLocalResources', task ':app:dataBindingGenBaseClassesDebug', task ':app:checkDebugAarMetadata', task ':app:compileDebugNavigationResources', task ':app:mapDebugSourceSetPaths', task ':app:createDebugCompatibleScreenManifests', task ':app:extractDeepLinksDebug', task ':app:processDebugMainManifest', task ':app:processDebugManifest', task ':app:processDebugManifestForPackage', task ':app:processDebugResources', task ':app:compileDebugKotlin', task ':app:javaPreCompileDebug', task ':app:compileDebugJavaWithJavac', task ':app:mergeDebugShaders', task ':app:compileDebugShaders', task ':app:generateDebugAssets', task ':app:mergeDebugAssets', task ':app:compressDebugAssets', task ':app:processDebugJavaRes', task ':app:mergeDebugJavaResource', task ':app:checkDebugDuplicateClasses', task ':app:desugarDebugFileDependencies', task ':app:mergeExtDexDebug', task ':app:mergeLibDexDebug', task ':app:dexBuilderDebug', task ':app:mergeProjectDexDebug', task ':app:mergeDebugJniLibFolders', task ':app:mergeDebugNativeLibs', task ':app:stripDebugDebugSymbols', task ':app:validateSigningDebug', task ':app:writeDebugAppMetadata', task ':app:writeDebugSigningConfigVersions', task ':app:packageDebug', task ':app:createDebugApkListingFileRedirect', task ':app:assembleDebug']
+Tasks that were excluded: []
+Resolve mutations for :app:clean (Thread[#116,Execution worker Thread 2,5,main]) started.
+:app:clean (Thread[#116,Execution worker Thread 2,5,main]) started.
+destroyer locations for task group 0 (Thread[#114,included builds,5,main]) started.
+
+> Task :app:clean UP-TO-DATE
+Caching disabled for task ':app:clean' because:
+  Build cache is disabled
+Task ':app:clean' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :app:preBuild (Thread[#116,Execution worker Thread 2,5,main]) started.
+:app:preBuild (Thread[#116,Execution worker Thread 2,5,main]) started.
+
+> Task :app:preBuild UP-TO-DATE
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preDebugBuild (Thread[#116,Execution worker Thread 2,5,main]) started.
+:app:preDebugBuild (Thread[#116,Execution worker Thread 2,5,main]) started.
+
+> Task :app:preDebugBuild UP-TO-DATE
+Skipping task ':app:preDebugBuild' as it has no actions.
+Resolve mutations for :app:mergeDebugNativeDebugMetadata (Thread[#116,Execution worker Thread 2,5,main]) started.
+:app:mergeDebugNativeDebugMetadata (Thread[#116,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+Skipping task ':app:mergeDebugNativeDebugMetadata' as it has no source files and no previous output files.
+Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[#116,Execution worker Thread 2,5,main]) started.
+:app:checkKotlinGradlePluginConfigurationErrors (Thread[#116,Execution worker Thread 2,5,main]) started.
+
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':app:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :app:dataBindingMergeDependencyArtifactsDebug (Thread[#116,Execution worker Thread 2,5,main]) started.
+:app:dataBindingMergeDependencyArtifactsDebug (Thread[#116,Execution worker Thread 2,5,main]) started.
+Resolve mutations for :app:generateDebugResValues (Thread[#120,Execution worker Thread 6,5,main]) started.
+:app:generateDebugResValues (Thread[#120,Execution worker Thread 6,5,main]) started.
+
+> Task :app:generateDebugResValues
+Caching disabled for task ':app:generateDebugResValues' because:
+  Build cache is disabled
+Task ':app:generateDebugResValues' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:generateDebugResources (Thread[#120,Execution worker Thread 6,5,main]) started.
+:app:generateDebugResources (Thread[#120,Execution worker Thread 6,5,main]) started.
+
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+Caching disabled for task ':app:dataBindingMergeDependencyArtifactsDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:dataBindingMergeDependencyArtifactsDebug' is not up-to-date because:
+  No history is available.
+
+> Task :app:generateDebugResources
+Caching disabled for task ':app:generateDebugResources' because:
+  Build cache is disabled
+Task ':app:generateDebugResources' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:mergeDebugResources (Thread[#120,Execution worker Thread 6,5,main]) started.
+:app:mergeDebugResources (Thread[#120,Execution worker Thread 6,5,main]) started.
+
+> Task :app:mergeDebugResources
+Caching disabled for task ':app:mergeDebugResources' because:
+  Build cache is disabled
+Task ':app:mergeDebugResources' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:mergeDebugResources'.
+[MergeResources] Inputs are non-incremental full task action.
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-hi\values-hi.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-hi_values-hi.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-watch-v21\values-watch-v21.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-watch-v21_values-watch-v21.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-watch-v20\values-watch-v20.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-watch-v20_values-watch-v20.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-pt\values-pt.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-pt_values-pt.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-hr\values-hr.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-hr_values-hr.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values\values.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values_values.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-hy\values-hy.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-hy_values-hy.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-hu\values-hu.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-hu_values-hu.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h320dp-port-v13\values-h320dp-port-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-h320dp-port-v13_values-h320dp-port-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v18\values-v18.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v18_values-v18.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ldltr-v21\values-ldltr-v21.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ldltr-v21_values-ldltr-v21.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-w360dp-port-v13\values-w360dp-port-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-w360dp-port-v13_values-w360dp-port-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v16\values-v16.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v16_values-v16.arsc.flat
+
+Resolve mutations for :app:packageDebugResources (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:packageDebugResources (Thread[#118,Execution worker Thread 4,5,main]) started.
+
+> Task :app:packageDebugResources
+Caching disabled for task ':app:packageDebugResources' because:
+  Build cache is disabled
+Task ':app:packageDebugResources' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:packageDebugResources'.
+[MergeResources] Inputs are non-incremental full task action.
+Resolve mutations for :app:processDebugNavigationResources (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:processDebugNavigationResources (Thread[#118,Execution worker Thread 4,5,main]) started.
+
+> Task :app:processDebugNavigationResources
+Caching disabled for task ':app:processDebugNavigationResources' because:
+  Build cache is disabled
+Task ':app:processDebugNavigationResources' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:parseDebugLocalResources (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:parseDebugLocalResources (Thread[#118,Execution worker Thread 4,5,main]) started.
+Resolve mutations for :app:checkDebugAarMetadata (Thread[#125,Execution worker Thread 11,5,main]) started.
+:app:checkDebugAarMetadata (Thread[#125,Execution worker Thread 11,5,main]) started.
+Resolve mutations for :app:compileDebugNavigationResources (Thread[#121,Execution worker Thread 7,5,main]) started.
+:app:compileDebugNavigationResources (Thread[#121,Execution worker Thread 7,5,main]) started.
+
+> Task :app:checkDebugAarMetadata
+Caching disabled for task ':app:checkDebugAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:checkDebugAarMetadata' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:mapDebugSourceSetPaths (Thread[#125,Execution worker Thread 11,5,main]) started.
+:app:mapDebugSourceSetPaths (Thread[#125,Execution worker Thread 11,5,main]) started.
+
+> Task :app:compileDebugNavigationResources
+Caching disabled for task ':app:compileDebugNavigationResources' because:
+  Build cache is disabled
+Task ':app:compileDebugNavigationResources' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:compileDebugNavigationResources'.
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\generated\updated_navigation_xml\debug\navigation\mobile_navigation.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\compiled_navigation_res\debug\compileDebugNavigationResources\navigation_mobile_navigation.xml.flat
+
+> Task :app:mapDebugSourceSetPaths
+Caching disabled for task ':app:mapDebugSourceSetPaths' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:mapDebugSourceSetPaths' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:createDebugCompatibleScreenManifests (Thread[#125,Execution worker Thread 11,5,main]) started.
+:app:createDebugCompatibleScreenManifests (Thread[#125,Execution worker Thread 11,5,main]) started.
+
+> Task :app:createDebugCompatibleScreenManifests
+Caching disabled for task ':app:createDebugCompatibleScreenManifests' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:createDebugCompatibleScreenManifests' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:extractDeepLinksDebug (Thread[#125,Execution worker Thread 11,5,main]) started.
+:app:extractDeepLinksDebug (Thread[#125,Execution worker Thread 11,5,main]) started.
+
+> Task :app:parseDebugLocalResources
+Caching disabled for task ':app:parseDebugLocalResources' because:
+  Build cache is disabled
+Task ':app:parseDebugLocalResources' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:parseDebugLocalResources'.
+
+> Task :app:extractDeepLinksDebug
+Caching disabled for task ':app:extractDeepLinksDebug' because:
+  Build cache is disabled
+Task ':app:extractDeepLinksDebug' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:processDebugMainManifest (Thread[#125,Execution worker Thread 11,5,main]) started.
+:app:processDebugMainManifest (Thread[#118,Execution worker Thread 4,5,main]) started.
+
+> Task :app:mergeDebugResources
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-w1240dp-v13\values-w1240dp-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-w1240dp-v13_values-w1240dp-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v17\values-v17.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v17_values-v17.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-es-rUS\values-es-rUS.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-es-rUS_values-es-rUS.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-b+sr+Latn\values-b+sr+Latn.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-b+sr+Latn_values-b+sr+Latn.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ar\values-ar.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ar_values-ar.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-as\values-as.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-as_values-as.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v23\values-v23.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v23_values-v23.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-is\values-is.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-is_values-is.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-am\values-am.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-am_values-am.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v21\values-v21.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v21_values-v21.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-w320dp-land-v13\values-w320dp-land-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-w320dp-land-v13_values-w320dp-land-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-iw\values-iw.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-iw_values-iw.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-it\values-it.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-it_values-it.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ja\values-ja.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ja_values-ja.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-zh-rHK\values-zh-rHK.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-zh-rHK_values-zh-rHK.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-az\values-az.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-az_values-az.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-w600dp-v13\values-w600dp-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-w600dp-v13_values-w600dp-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ro\values-ro.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ro_values-ro.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-zu\values-zu.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-zu_values-zu.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-be\values-be.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-be_values-be.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v28\values-v28.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v28_values-v28.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v26\values-v26.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v26_values-v26.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h480dp-land-v13\values-h480dp-land-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-h480dp-land-v13_values-h480dp-land-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-bg\values-bg.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-bg_values-bg.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v24\values-v24.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v24_values-v24.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-bn\values-bn.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-bn_values-bn.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sl\values-sl.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sl_values-sl.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sr\values-sr.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sr_values-sr.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-kk\values-kk.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-kk_values-kk.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sw600dp-v13\values-sw600dp-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sw600dp-v13_values-sw600dp-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ca\values-ca.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ca_values-ca.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v31\values-v31.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v31_values-v31.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h360dp-land-v13\values-h360dp-land-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-h360dp-land-v13_values-h360dp-land-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ka\values-ka.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ka_values-ka.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ko\values-ko.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ko_values-ko.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sq\values-sq.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sq_values-sq.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-pt-rPT\values-pt-rPT.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-pt-rPT_values-pt-rPT.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sw\values-sw.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sw_values-sw.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-da\values-da.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-da_values-da.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-km\values-km.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-km_values-km.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-th\values-th.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-th_values-th.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-xlarge-v4\values-xlarge-v4.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-xlarge-v4_values-xlarge-v4.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-si\values-si.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-si_values-si.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-lt\values-lt.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-lt_values-lt.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-cs\values-cs.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-cs_values-cs.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-mr\values-mr.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-mr_values-mr.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-tl\values-tl.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-tl_values-tl.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-lv\values-lv.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-lv_values-lv.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-tr\values-tr.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-tr_values-tr.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-uz\values-uz.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-uz_values-uz.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ml\values-ml.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ml_values-ml.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sk\values-sk.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sk_values-sk.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-pt-rBR\values-pt-rBR.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-pt-rBR_values-pt-rBR.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ru\values-ru.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ru_values-ru.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-uk\values-uk.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-uk_values-uk.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-mn\values-mn.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-mn_values-mn.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-fa\values-fa.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-fa_values-fa.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ne\values-ne.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ne_values-ne.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-fr-rCA\values-fr-rCA.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-fr-rCA_values-fr-rCA.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-es\values-es.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-es_values-es.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ldrtl-v17\values-ldrtl-v17.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ldrtl-v17_values-ldrtl-v17.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-w600dp-land-v13\values-w600dp-land-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-pa\values-pa.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-pa_values-pa.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-vi\values-vi.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-vi_values-vi.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-w400dp-port-v13\values-w400dp-port-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-w400dp-port-v13_values-w400dp-port-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-te\values-te.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-te_values-te.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sw360dp-v13\values-sw360dp-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sw360dp-v13_values-sw360dp-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-kn\values-kn.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-kn_values-kn.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-b+es+419\values-b+es+419.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-b+es+419_values-b+es+419.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-my\values-my.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-my_values-my.arsc.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\xml\data_extraction_rules.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\xml_data_extraction_rules.xml.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-nl\values-nl.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-nl_values-nl.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-land\values-land.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-land_values-land.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-night-v8\values-night-v8.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-night-v8_values-night-v8.arsc.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\drawable\ic_menu_control.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_ic_menu_control.xml.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-large-v4\values-large-v4.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-large-v4_values-large-v4.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h720dp-v13\values-h720dp-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-h720dp-v13_values-h720dp-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sv\values-sv.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sv_values-sv.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-small-v4\values-small-v4.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-small-v4_values-small-v4.arsc.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\activity_main.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_activity_main.xml.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ur\values-ur.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ur_values-ur.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-de\values-de.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-de_values-de.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-mk\values-mk.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-mk_values-mk.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-pl\values-pl.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-pl_values-pl.arsc.flat
+Compiling file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\mipmap-xxxhdpi\ic_launcher.webp to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-xxxhdpi_ic_launcher.webp.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-en-rAU\values-en-rAU.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-en-rAU_values-en-rAU.arsc.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\drawable\ic_launcher_background.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_ic_launcher_background.xml.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\drawable\ic_launcher_foreground.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_ic_launcher_foreground.xml.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-lo\values-lo.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-lo_values-lo.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-fr\values-fr.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-fr_values-fr.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-gu\values-gu.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-gu_values-gu.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-el\values-el.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-el_values-el.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-port\values-port.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-port_values-port.arsc.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\drawable\ic_menu_camera.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_ic_menu_camera.xml.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-nb\values-nb.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-nb_values-nb.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ms\values-ms.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ms_values-ms.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-zh-rTW\values-zh-rTW.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-zh-rTW_values-zh-rTW.arsc.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\xml\network_security_config.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\xml_network_security_config.xml.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_home.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_home.xml.flat
+Compiling file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\mipmap-xxhdpi\ic_launcher_round.webp to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-xxhdpi_ic_launcher_round.webp.flat
+Compiling file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\mipmap-xxxhdpi\ic_launcher_round.webp to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-xxxhdpi_ic_launcher_round.webp.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_control.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_control.xml.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\mipmap-anydpi\ic_launcher.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-anydpi_ic_launcher.xml.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\xml\backup_rules.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\xml_backup_rules.xml.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\xml\preferences.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\xml_preferences.xml.flat
+Compiling file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\mipmap-hdpi\ic_launcher.webp to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-hdpi_ic_launcher.webp.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_slideshow.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_slideshow.xml.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-zh-rCN\values-zh-rCN.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-zh-rCN_values-zh-rCN.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-fi\values-fi.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-fi_values-fi.arsc.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\mipmap-anydpi\ic_launcher_round.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-anydpi_ic_launcher_round.xml.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-gl\values-gl.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-gl_values-gl.arsc.flat
+Compiling file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\mipmap-mdpi\ic_launcher.webp to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-mdpi_ic_launcher.webp.flat
+Compiling file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\mipmap-xhdpi\ic_launcher_round.webp to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-xhdpi_ic_launcher_round.webp.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-in\values-in.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-in_values-in.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-or\values-or.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-or_values-or.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v22\values-v22.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v22_values-v22.arsc.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\content_main.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_content_main.xml.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-en-rXC\values-en-rXC.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-en-rXC_values-en-rXC.arsc.flat
+Compiling file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\mipmap-mdpi\ic_launcher_round.webp to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-mdpi_ic_launcher_round.webp.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-bs\values-bs.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-bs_values-bs.arsc.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\nav_header_main.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_nav_header_main.xml.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\drawable\ic_menu_slideshow.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_ic_menu_slideshow.xml.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ta\values-ta.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ta_values-ta.arsc.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\menu\main.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\menu_main.xml.flat
+Compiling file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\mipmap-xxhdpi\ic_launcher.webp to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-xxhdpi_ic_launcher.webp.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\app_bar_main.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_app_bar_main.xml.flat
+Compiling file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\mipmap-xhdpi\ic_launcher.webp to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-xhdpi_ic_launcher.webp.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-en-rIN\values-en-rIN.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-en-rIN_values-en-rIN.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-et\values-et.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-et_values-et.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-hdpi-v4\values-hdpi-v4.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-hdpi-v4_values-hdpi-v4.arsc.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\drawable\side_nav_bar.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_side_nav_bar.xml.flat
+Compiling file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\mipmap-hdpi\ic_launcher_round.webp to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-hdpi_ic_launcher_round.webp.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-af\values-af.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-af_values-af.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v25\values-v25.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v25_values-v25.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-en-rCA\values-en-rCA.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-en-rCA_values-en-rCA.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ky\values-ky.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ky_values-ky.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h550dp-port-v13\values-h550dp-port-v13.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-h550dp-port-v13_values-h550dp-port-v13.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-eu\values-eu.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-eu_values-eu.arsc.flat
+Compiling XML table C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-en-rGB\values-en-rGB.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\values-en-rGB_values-en-rGB.arsc.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\menu\activity_main_drawer.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\menu_activity_main_drawer.xml.flat
+Compiling xml file C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\res\drawable\joystick_background.xml to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_joystick_background.xml.flat
+
+> Task :app:processDebugMainManifest
+Caching disabled for task ':app:processDebugMainManifest' because:
+  Build cache is disabled
+Task ':app:processDebugMainManifest' is not up-to-date because:
+  No history is available.
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\70fc40d50660cb07d16d14a09aa04fe9\transformed\viewbinding-8.13.2\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\b091b7a99384d4dc6ff79a1608462158\transformed\navigation-common-2.6.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\8e2bf975422e49ae288b569efcaccf26\transformed\navigation-common-ktx-2.6.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\c5e4b8c276df7aed5cb9b2b4dc58e5c7\transformed\navigation-runtime-2.6.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\716a7c36bf99f00435804a462cedf03c\transformed\navigation-runtime-ktx-2.6.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\b816a1b48e698d90729a5c2d99848ced\transformed\navigation-fragment-2.6.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\b422bc4410c1bf050155fadea70ca69a\transformed\navigation-fragment-ktx-2.6.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\8c2c22c63c5c3fae37eaa462ce96f1ac\transformed\navigation-ui-ktx-2.6.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\f9076d583ef7aaa880b702d6fba72efe\transformed\navigation-ui-2.6.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\335591eb56013a7a718a73b9beea60c6\transformed\material-1.10.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\bed1442195cfd4732e9b1e3a0161b4e1\transformed\constraintlayout-2.1.4\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\9d5387b47fe26ab192b255934c8085df\transformed\appcompat-resources-1.6.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\95593e826801a8ea990b45c39f9caa18\transformed\preference-ktx-1.2.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\7b32d013359248db7f24031767a2d591\transformed\preference-1.2.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\85a8906783f1f9fdc20b81953f0f7483\transformed\appcompat-1.6.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\4216142302fdfb6074563b7ef98364ca\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\e337abd94a8fd141527ec2b69e6c17af\transformed\emoji2-1.2.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\556ed32e1eb2d9113f3eaa5c7b023de0\transformed\viewpager2-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\54181f8df70e6e2447f4d0c2f4483d43\transformed\fragment-1.6.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\bc085e2e4a97110ec432b76870493f3d\transformed\fragment-ktx-1.6.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\4586694c905947e1420fed3437163078\transformed\activity-ktx-1.8.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\00ed1ff88cc7f4d639ec3f9802f7975e\transformed\activity-1.8.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\b6c041adc413006150821c67274020dc\transformed\drawerlayout-1.1.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\43380ec7084e231604e009b69b4c5294\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\3b3da71e9f847dac323aa66a145adae4\transformed\dynamicanimation-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\df7e0db5248a69c6858aa3f9252cf516\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\15f076ae7f7ff3d4f846f955fa067905\transformed\vectordrawable-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\e6ebb348303ec7e3c727eb67a6822ff6\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\094910e232e71288b319e99c3deed34a\transformed\loader-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\e8a4a7ee6e86a7c2d7add53d0c347c3d\transformed\recyclerview-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\0f42d2ac6a0ab569d1971f93cad5ca0e\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\43de5714c0dc095b8e92cecaa1dbb5e2\transformed\viewpager-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\533b20aa5c937a68767431894f97b347\transformed\customview-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\86c82efe4e95d33ac33d9778f7d8516c\transformed\transition-1.4.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\682e0905897a664fa8546770d9c3ad7c\transformed\window-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\7b416b5505af9d717f97f9031dedc241\transformed\core-1.10.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\4bc15e943f94536da7c35ced73700846\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\cdba6416fd0400b9ab40cbd031f73cb5\transformed\savedstate-1.2.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\67134bbe37f129af5e67f9942c7ef2af\transformed\lifecycle-runtime-ktx-2.6.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\0d1afa13768dbba292d3c644a7956359\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\f8afca5d5d3f2bd357fe31bdcb7ff8da\transformed\lifecycle-process-2.6.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\624b7ecdd5d1efe579a995ed11b81aae\transformed\lifecycle-livedata-core-ktx-2.6.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\9502c8a08622a5fec295113892b182b3\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\a368c8a41764546d4b990cd9d78c41f0\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\b3519d0ef53c26fd2b7613ccf6380fbc\transformed\lifecycle-runtime-2.6.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\1ce5ae6c79000cfaec77cb6d5d2cff3c\transformed\lifecycle-livedata-ktx-2.6.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\66567497d70b2b00f27f434ab2332718\transformed\lifecycle-viewmodel-ktx-2.6.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\379c01e22f7cf013b4dcfc9df023a335\transformed\lifecycle-viewmodel-savedstate-2.6.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\327769354d63ce204c64fd1102249e84\transformed\core-ktx-1.10.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\e49197c4f763ab48ce907f664ad14c82\transformed\annotation-experimental-1.3.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\2abbd845b86712388d0c1ee4ff2cc13d\transformed\cursoradapter-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\4c10a6f0ad1df32d736b15476deb3401\transformed\cardview-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\c2848730718cd949dc44e8697762115a\transformed\interpolator-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\58e79c96a84ac48d53e938bb6908ec23\transformed\versionedparcelable-1.1.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\11ceea2e6bca3a5d1e46b5fd8854002a\transformed\startup-runtime-1.1.1\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\fbbcdbccc6f9a33582f5627b83e9662e\transformed\tracing-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\1c56ff56461e8fb3475ff031ab4aa6f2\transformed\core-runtime-2.2.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\a33d916c4e70f565d0c9d71819a80f40\transformed\documentfile-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\ec20c4c3644914f7a9198c1a7f8a9028\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\74daf7a362fd92e266a993d91228ca70\transformed\print-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\16683\.gradle\caches\8.13\transforms\b30a9ea6b2ee3383c0931646bfbc54d3\transformed\android-104.5112.06\AndroidManifest.xml
+Merging main manifest C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml
+
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\70fc40d50660cb07d16d14a09aa04fe9\transformed\viewbinding-8.13.2\AndroidManifest.xml
+Merging manifest with lower [androidx.databinding:viewbinding:8.13.2] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.databinding:viewbinding:8.13.2] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\b091b7a99384d4dc6ff79a1608462158\transformed\navigation-common-2.6.0\AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-common:2.6.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-common:2.6.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\8e2bf975422e49ae288b569efcaccf26\transformed\navigation-common-ktx-2.6.0\AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-common-ktx:2.6.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-common-ktx:2.6.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\c5e4b8c276df7aed5cb9b2b4dc58e5c7\transformed\navigation-runtime-2.6.0\AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-runtime:2.6.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-runtime:2.6.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\716a7c36bf99f00435804a462cedf03c\transformed\navigation-runtime-ktx-2.6.0\AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-runtime-ktx:2.6.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-runtime-ktx:2.6.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\b816a1b48e698d90729a5c2d99848ced\transformed\navigation-fragment-2.6.0\AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-fragment:2.6.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-fragment:2.6.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\b422bc4410c1bf050155fadea70ca69a\transformed\navigation-fragment-ktx-2.6.0\AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-fragment-ktx:2.6.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-fragment-ktx:2.6.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\8c2c22c63c5c3fae37eaa462ce96f1ac\transformed\navigation-ui-ktx-2.6.0\AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-ui-ktx:2.6.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-ui-ktx:2.6.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\f9076d583ef7aaa880b702d6fba72efe\transformed\navigation-ui-2.6.0\AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-ui:2.6.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-ui:2.6.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\335591eb56013a7a718a73b9beea60c6\transformed\material-1.10.0\AndroidManifest.xml
+Merging manifest with lower [com.google.android.material:material:1.10.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.material:material:1.10.0] AndroidManifest.xml:20:5-44
+application defined in both files...
+Merging application with lower [com.google.android.material:material:1.10.0] AndroidManifest.xml:22:5-20
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\bed1442195cfd4732e9b1e3a0161b4e1\transformed\constraintlayout-2.1.4\AndroidManifest.xml
+Merging manifest with lower [androidx.constraintlayout:constraintlayout:2.1.4] AndroidManifest.xml:2:1-11:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.constraintlayout:constraintlayout:2.1.4] AndroidManifest.xml:5:5-7:41
+application defined in both files...
+Merging application with lower [androidx.constraintlayout:constraintlayout:2.1.4] AndroidManifest.xml:9:5-20
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\9d5387b47fe26ab192b255934c8085df\transformed\appcompat-resources-1.6.1\AndroidManifest.xml
+Merging manifest with lower [androidx.appcompat:appcompat-resources:1.6.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.appcompat:appcompat-resources:1.6.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\95593e826801a8ea990b45c39f9caa18\transformed\preference-ktx-1.2.1\AndroidManifest.xml
+Merging manifest with lower [androidx.preference:preference-ktx:1.2.1] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.preference:preference-ktx:1.2.1] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\7b32d013359248db7f24031767a2d591\transformed\preference-1.2.1\AndroidManifest.xml
+Merging manifest with lower [androidx.preference:preference:1.2.1] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.preference:preference:1.2.1] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\85a8906783f1f9fdc20b81953f0f7483\transformed\appcompat-1.6.1\AndroidManifest.xml
+Merging manifest with lower [androidx.appcompat:appcompat:1.6.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.appcompat:appcompat:1.6.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\4216142302fdfb6074563b7ef98364ca\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml
+Merging manifest with lower [androidx.emoji2:emoji2-views-helper:1.2.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.emoji2:emoji2-views-helper:1.2.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\e337abd94a8fd141527ec2b69e6c17af\transformed\emoji2-1.2.0\AndroidManifest.xml
+Merging manifest with lower [androidx.emoji2:emoji2:1.2.0] AndroidManifest.xml:17:1-35:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.emoji2:emoji2:1.2.0] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.emoji2:emoji2:1.2.0] AndroidManifest.xml:23:5-33:19
+Adopted [provider: null]
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\556ed32e1eb2d9113f3eaa5c7b023de0\transformed\viewpager2-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.viewpager2:viewpager2:1.0.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.viewpager2:viewpager2:1.0.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\54181f8df70e6e2447f4d0c2f4483d43\transformed\fragment-1.6.0\AndroidManifest.xml
+Merging manifest with lower [androidx.fragment:fragment:1.6.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.fragment:fragment:1.6.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\bc085e2e4a97110ec432b76870493f3d\transformed\fragment-ktx-1.6.0\AndroidManifest.xml
+Merging manifest with lower [androidx.fragment:fragment-ktx:1.6.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.fragment:fragment-ktx:1.6.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\4586694c905947e1420fed3437163078\transformed\activity-ktx-1.8.0\AndroidManifest.xml
+Merging manifest with lower [androidx.activity:activity-ktx:1.8.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.activity:activity-ktx:1.8.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\00ed1ff88cc7f4d639ec3f9802f7975e\transformed\activity-1.8.0\AndroidManifest.xml
+Merging manifest with lower [androidx.activity:activity:1.8.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.activity:activity:1.8.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\b6c041adc413006150821c67274020dc\transformed\drawerlayout-1.1.1\AndroidManifest.xml
+Merging manifest with lower [androidx.drawerlayout:drawerlayout:1.1.1] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.drawerlayout:drawerlayout:1.1.1] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\43380ec7084e231604e009b69b4c5294\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.coordinatorlayout:coordinatorlayout:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.coordinatorlayout:coordinatorlayout:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\3b3da71e9f847dac323aa66a145adae4\transformed\dynamicanimation-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.dynamicanimation:dynamicanimation:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.dynamicanimation:dynamicanimation:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\df7e0db5248a69c6858aa3f9252cf516\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.vectordrawable:vectordrawable-animated:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.vectordrawable:vectordrawable-animated:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\15f076ae7f7ff3d4f846f955fa067905\transformed\vectordrawable-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.vectordrawable:vectordrawable:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.vectordrawable:vectordrawable:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\e6ebb348303ec7e3c727eb67a6822ff6\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.legacy:legacy-support-core-utils:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.legacy:legacy-support-core-utils:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\094910e232e71288b319e99c3deed34a\transformed\loader-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.loader:loader:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.loader:loader:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\e8a4a7ee6e86a7c2d7add53d0c347c3d\transformed\recyclerview-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.recyclerview:recyclerview:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.recyclerview:recyclerview:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\0f42d2ac6a0ab569d1971f93cad5ca0e\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml
+Merging manifest with lower [androidx.slidingpanelayout:slidingpanelayout:1.2.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.slidingpanelayout:slidingpanelayout:1.2.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\43de5714c0dc095b8e92cecaa1dbb5e2\transformed\viewpager-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.viewpager:viewpager:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.viewpager:viewpager:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\533b20aa5c937a68767431894f97b347\transformed\customview-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.customview:customview:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.customview:customview:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\86c82efe4e95d33ac33d9778f7d8516c\transformed\transition-1.4.1\AndroidManifest.xml
+Merging manifest with lower [androidx.transition:transition:1.4.1] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.transition:transition:1.4.1] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\682e0905897a664fa8546770d9c3ad7c\transformed\window-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.window:window:1.0.0] AndroidManifest.xml:17:1-33:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.window:window:1.0.0] AndroidManifest.xml:20:5-22:41
+application defined in both files...
+Merging application with lower [androidx.window:window:1.0.0] AndroidManifest.xml:24:5-31:19
+Adopted [uses-library: null]
+Adopted [uses-library: null]
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\7b416b5505af9d717f97f9031dedc241\transformed\core-1.10.1\AndroidManifest.xml
+Merging manifest with lower [androidx.core:core:1.10.1] AndroidManifest.xml:17:1-30:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.core:core:1.10.1] AndroidManifest.xml:20:5-44
+Adopted [permission: null]
+Adopted [uses-permission: null]
+application defined in both files...
+Merging application with lower [androidx.core:core:1.10.1] AndroidManifest.xml:28:5-89
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\4bc15e943f94536da7c35ced73700846\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml
+Merging manifest with lower [androidx.savedstate:savedstate-ktx:1.2.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.savedstate:savedstate-ktx:1.2.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\cdba6416fd0400b9ab40cbd031f73cb5\transformed\savedstate-1.2.1\AndroidManifest.xml
+Merging manifest with lower [androidx.savedstate:savedstate:1.2.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.savedstate:savedstate:1.2.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\67134bbe37f129af5e67f9942c7ef2af\transformed\lifecycle-runtime-ktx-2.6.1\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\0d1afa13768dbba292d3c644a7956359\transformed\lifecycle-livedata-core-2.6.1\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-livedata-core:2.6.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-livedata-core:2.6.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\f8afca5d5d3f2bd357fe31bdcb7ff8da\transformed\lifecycle-process-2.6.1\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-process:2.6.1] AndroidManifest.xml:17:1-35:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-process:2.6.1] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.lifecycle:lifecycle-process:2.6.1] AndroidManifest.xml:23:5-33:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.lifecycle:lifecycle-process:2.6.1] AndroidManifest.xml:24:9-32:20
+Adopted [meta-data: null]
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\624b7ecdd5d1efe579a995ed11b81aae\transformed\lifecycle-livedata-core-ktx-2.6.1\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\9502c8a08622a5fec295113892b182b3\transformed\lifecycle-livedata-2.6.1\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-livedata:2.6.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-livedata:2.6.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\a368c8a41764546d4b990cd9d78c41f0\transformed\lifecycle-viewmodel-2.6.1\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel:2.6.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel:2.6.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\b3519d0ef53c26fd2b7613ccf6380fbc\transformed\lifecycle-runtime-2.6.1\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-runtime:2.6.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-runtime:2.6.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\1ce5ae6c79000cfaec77cb6d5d2cff3c\transformed\lifecycle-livedata-ktx-2.6.1\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-livedata-ktx:2.6.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-livedata-ktx:2.6.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\66567497d70b2b00f27f434ab2332718\transformed\lifecycle-viewmodel-ktx-2.6.1\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\379c01e22f7cf013b4dcfc9df023a335\transformed\lifecycle-viewmodel-savedstate-2.6.1\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\327769354d63ce204c64fd1102249e84\transformed\core-ktx-1.10.1\AndroidManifest.xml
+Merging manifest with lower [androidx.core:core-ktx:1.10.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.core:core-ktx:1.10.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\e49197c4f763ab48ce907f664ad14c82\transformed\annotation-experimental-1.3.0\AndroidManifest.xml
+Merging manifest with lower [androidx.annotation:annotation-experimental:1.3.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.annotation:annotation-experimental:1.3.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\2abbd845b86712388d0c1ee4ff2cc13d\transformed\cursoradapter-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.cursoradapter:cursoradapter:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.cursoradapter:cursoradapter:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\4c10a6f0ad1df32d736b15476deb3401\transformed\cardview-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.cardview:cardview:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.cardview:cardview:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\c2848730718cd949dc44e8697762115a\transformed\interpolator-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.interpolator:interpolator:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.interpolator:interpolator:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\58e79c96a84ac48d53e938bb6908ec23\transformed\versionedparcelable-1.1.1\AndroidManifest.xml
+Merging manifest with lower [androidx.versionedparcelable:versionedparcelable:1.1.1] AndroidManifest.xml:17:1-27:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.versionedparcelable:versionedparcelable:1.1.1] AndroidManifest.xml:20:5-22:41
+application defined in both files...
+Merging application with lower [androidx.versionedparcelable:versionedparcelable:1.1.1] AndroidManifest.xml:24:5-25:19
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml
+Merging manifest with lower [androidx.profileinstaller:profileinstaller:1.3.0] AndroidManifest.xml:17:1-55:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.profileinstaller:profileinstaller:1.3.0] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.profileinstaller:profileinstaller:1.3.0] AndroidManifest.xml:23:5-53:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.profileinstaller:profileinstaller:1.3.0] AndroidManifest.xml:24:9-32:20
+Adopted [meta-data: null]
+Adopted [receiver: null]
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\11ceea2e6bca3a5d1e46b5fd8854002a\transformed\startup-runtime-1.1.1\AndroidManifest.xml
+Merging manifest with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:17:1-33:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:21:5-23:41
+application defined in both files...
+Merging application with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:25:5-31:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:26:9-30:34
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\fbbcdbccc6f9a33582f5627b83e9662e\transformed\tracing-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.tracing:tracing:1.0.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.tracing:tracing:1.0.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\1c56ff56461e8fb3475ff031ab4aa6f2\transformed\core-runtime-2.2.0\AndroidManifest.xml
+Merging manifest with lower [androidx.arch.core:core-runtime:2.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.arch.core:core-runtime:2.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\a33d916c4e70f565d0c9d71819a80f40\transformed\documentfile-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.documentfile:documentfile:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.documentfile:documentfile:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\ec20c4c3644914f7a9198c1a7f8a9028\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\74daf7a362fd92e266a993d91228ca70\transformed\print-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.print:print:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.print:print:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\16683\.gradle\caches\8.13\transforms\b30a9ea6b2ee3383c0931646bfbc54d3\transformed\android-104.5112.06\AndroidManifest.xml
+Merging manifest with lower [com.github.webrtc-sdk:android:104.5112.06] AndroidManifest.xml:11:1-14:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.github.webrtc-sdk:android:104.5112.06] AndroidManifest.xml:13:3-72
+Merging result: SUCCESS
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.pivech3"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="36" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:4:5-67
+11-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:4:22-64
+12
+13    <permission
+13-->[androidx.core:core:1.10.1] C:\Users\16683\.gradle\caches\8.13\transforms\7b416b5505af9d717f97f9031dedc241\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+14        android:name="com.example.pivech3.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.10.1] C:\Users\16683\.gradle\caches\8.13\transforms\7b416b5505af9d717f97f9031dedc241\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.10.1] C:\Users\16683\.gradle\caches\8.13\transforms\7b416b5505af9d717f97f9031dedc241\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.example.pivech3.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.10.1] C:\Users\16683\.gradle\caches\8.13\transforms\7b416b5505af9d717f97f9031dedc241\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.10.1] C:\Users\16683\.gradle\caches\8.13\transforms\7b416b5505af9d717f97f9031dedc241\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:6:5-26:19
+20        android:allowBackup="true"
+20-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:7:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.10.1] C:\Users\16683\.gradle\caches\8.13\transforms\7b416b5505af9d717f97f9031dedc241\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+22        android:dataExtractionRules="@xml/data_extraction_rules"
+22-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:8:9-65
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:fullBackupContent="@xml/backup_rules"
+25-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:9:9-54
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:10:9-43
+27        android:label="@string/app_name"
+27-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:11:9-41
+28        android:networkSecurityConfig="@xml/network_security_config"
+28-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:12:9-69
+29        android:roundIcon="@mipmap/ic_launcher_round"
+29-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:13:9-54
+30        android:supportsRtl="true"
+30-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:14:9-35
+31        android:theme="@style/Theme.PiVech3" >
+31-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:15:9-45
+32        <activity
+32-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:16:9-25:20
+33            android:name="com.example.pivech3.MainActivity"
+33-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:17:13-41
+34            android:exported="true"
+34-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:18:13-36
+35            android:theme="@style/Theme.PiVech3.Immersive" >
+35-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:19:13-59
+36            <intent-filter>
+36-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:20:13-24:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:21:17-69
+37-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:21:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:23:17-77
+39-->C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\AndroidManifest.xml:23:27-74
+40            </intent-filter>
+41        </activity>
+42
+43        <provider
+43-->[androidx.emoji2:emoji2:1.2.0] C:\Users\16683\.gradle\caches\8.13\transforms\e337abd94a8fd141527ec2b69e6c17af\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+44            android:name="androidx.startup.InitializationProvider"
+44-->[androidx.emoji2:emoji2:1.2.0] C:\Users\16683\.gradle\caches\8.13\transforms\e337abd94a8fd141527ec2b69e6c17af\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+45            android:authorities="com.example.pivech3.androidx-startup"
+45-->[androidx.emoji2:emoji2:1.2.0] C:\Users\16683\.gradle\caches\8.13\transforms\e337abd94a8fd141527ec2b69e6c17af\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+46            android:exported="false" >
+46-->[androidx.emoji2:emoji2:1.2.0] C:\Users\16683\.gradle\caches\8.13\transforms\e337abd94a8fd141527ec2b69e6c17af\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+47            <meta-data
+47-->[androidx.emoji2:emoji2:1.2.0] C:\Users\16683\.gradle\caches\8.13\transforms\e337abd94a8fd141527ec2b69e6c17af\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+48                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+48-->[androidx.emoji2:emoji2:1.2.0] C:\Users\16683\.gradle\caches\8.13\transforms\e337abd94a8fd141527ec2b69e6c17af\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+49                android:value="androidx.startup" />
+49-->[androidx.emoji2:emoji2:1.2.0] C:\Users\16683\.gradle\caches\8.13\transforms\e337abd94a8fd141527ec2b69e6c17af\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+50            <meta-data
+50-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\16683\.gradle\caches\8.13\transforms\f8afca5d5d3f2bd357fe31bdcb7ff8da\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+51                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+51-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\16683\.gradle\caches\8.13\transforms\f8afca5d5d3f2bd357fe31bdcb7ff8da\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+52                android:value="androidx.startup" />
+52-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\16683\.gradle\caches\8.13\transforms\f8afca5d5d3f2bd357fe31bdcb7ff8da\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+53            <meta-data
+53-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+54                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+54-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+55                android:value="androidx.startup" />
+55-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+56        </provider>
+57
+58        <uses-library
+58-->[androidx.window:window:1.0.0] C:\Users\16683\.gradle\caches\8.13\transforms\682e0905897a664fa8546770d9c3ad7c\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+59            android:name="androidx.window.extensions"
+59-->[androidx.window:window:1.0.0] C:\Users\16683\.gradle\caches\8.13\transforms\682e0905897a664fa8546770d9c3ad7c\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+60            android:required="false" />
+60-->[androidx.window:window:1.0.0] C:\Users\16683\.gradle\caches\8.13\transforms\682e0905897a664fa8546770d9c3ad7c\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+61        <uses-library
+61-->[androidx.window:window:1.0.0] C:\Users\16683\.gradle\caches\8.13\transforms\682e0905897a664fa8546770d9c3ad7c\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+62            android:name="androidx.window.sidecar"
+62-->[androidx.window:window:1.0.0] C:\Users\16683\.gradle\caches\8.13\transforms\682e0905897a664fa8546770d9c3ad7c\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+63            android:required="false" />
+63-->[androidx.window:window:1.0.0] C:\Users\16683\.gradle\caches\8.13\transforms\682e0905897a664fa8546770d9c3ad7c\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+64
+65        <receiver
+65-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+66            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+66-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+67            android:directBootAware="false"
+67-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+68            android:enabled="true"
+68-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+69            android:exported="true"
+69-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+70            android:permission="android.permission.DUMP" >
+70-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+71            <intent-filter>
+71-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+72                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+72-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+72-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+73            </intent-filter>
+74            <intent-filter>
+74-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+75                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+75-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+75-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+76            </intent-filter>
+77            <intent-filter>
+77-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+78                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+78-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+78-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+79            </intent-filter>
+80            <intent-filter>
+80-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+81                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\16683\.gradle\caches\8.13\transforms\a7efe3ce424aaa8124f1251c9ee86d90\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+82            </intent-filter>
+83        </receiver>
+84    </application>
+85
+86</manifest>
+
+Merged manifest saved to C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_manifest\debug\processDebugMainManifest\AndroidManifest.xml
+Resolve mutations for :app:dataBindingGenBaseClassesDebug (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:dataBindingGenBaseClassesDebug (Thread[#118,Execution worker Thread 4,5,main]) started.
+
+> Task :app:dataBindingGenBaseClassesDebug
+Caching disabled for task ':app:dataBindingGenBaseClassesDebug' because:
+  Build cache is disabled
+Task ':app:dataBindingGenBaseClassesDebug' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:dataBindingGenBaseClassesDebug'.
+Resolve mutations for :app:processDebugManifest (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:processDebugManifest (Thread[#118,Execution worker Thread 4,5,main]) started.
+
+> Task :app:processDebugManifest
+Caching disabled for task ':app:processDebugManifest' because:
+  Build cache is disabled
+Task ':app:processDebugManifest' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:processDebugManifestForPackage (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:processDebugManifestForPackage (Thread[#118,Execution worker Thread 4,5,main]) started.
+Resolve mutations for :app:javaPreCompileDebug (Thread[#126,Execution worker Thread 12,5,main]) started.
+:app:javaPreCompileDebug (Thread[#126,Execution worker Thread 12,5,main]) started.
+Resolve mutations for :app:mergeDebugShaders (Thread[#121,Execution worker Thread 7,5,main]) started.
+:app:mergeDebugShaders (Thread[#121,Execution worker Thread 7,5,main]) started.
+
+> Task :app:javaPreCompileDebug
+Caching disabled for task ':app:javaPreCompileDebug' because:
+  Build cache is disabled
+Task ':app:javaPreCompileDebug' is not up-to-date because:
+  No history is available.
+
+> Task :app:mergeDebugShaders
+Caching disabled for task ':app:mergeDebugShaders' because:
+  Build cache is disabled
+  Simple merging task
+Task ':app:mergeDebugShaders' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:mergeDebugShaders'.
+Resolve mutations for :app:compileDebugShaders (Thread[#121,Execution worker Thread 7,5,main]) started.
+:app:compileDebugShaders (Thread[#121,Execution worker Thread 7,5,main]) started.
+
+> Task :app:compileDebugShaders NO-SOURCE
+Skipping task ':app:compileDebugShaders' as it has no source files and no previous output files.
+Resolve mutations for :app:generateDebugAssets (Thread[#121,Execution worker Thread 7,5,main]) started.
+:app:generateDebugAssets (Thread[#121,Execution worker Thread 7,5,main]) started.
+
+> Task :app:generateDebugAssets UP-TO-DATE
+Skipping task ':app:generateDebugAssets' as it has no actions.
+Resolve mutations for :app:mergeDebugAssets (Thread[#121,Execution worker Thread 7,5,main]) started.
+:app:mergeDebugAssets (Thread[#121,Execution worker Thread 7,5,main]) started.
+
+> Task :app:mergeDebugAssets
+Caching disabled for task ':app:mergeDebugAssets' because:
+  Build cache is disabled
+  Simple merging task
+Task ':app:mergeDebugAssets' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:mergeDebugAssets'.
+Resolve mutations for :app:compressDebugAssets (Thread[#121,Execution worker Thread 7,5,main]) started.
+:app:compressDebugAssets (Thread[#116,Execution worker Thread 2,5,main]) started.
+
+> Task :app:compressDebugAssets
+Caching disabled for task ':app:compressDebugAssets' because:
+  Build cache is disabled
+Task ':app:compressDebugAssets' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:compressDebugAssets'.
+Resolve mutations for :app:checkDebugDuplicateClasses (Thread[#116,Execution worker Thread 2,5,main]) started.
+:app:checkDebugDuplicateClasses (Thread[#121,Execution worker Thread 7,5,main]) started.
+Resolve mutations for :app:desugarDebugFileDependencies (Thread[#114,included builds,5,main]) started.
+:app:desugarDebugFileDependencies (Thread[#114,included builds,5,main]) started.
+
+> Task :app:desugarDebugFileDependencies
+Caching disabled for task ':app:desugarDebugFileDependencies' because:
+  Build cache is disabled
+Task ':app:desugarDebugFileDependencies' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:mergeDebugJniLibFolders (Thread[#114,included builds,5,main]) started.
+:app:mergeDebugJniLibFolders (Thread[#114,included builds,5,main]) started.
+
+> Task :app:mergeDebugJniLibFolders
+Caching disabled for task ':app:mergeDebugJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Task ':app:mergeDebugJniLibFolders' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:mergeDebugJniLibFolders'.
+Resolve mutations for :app:mergeDebugNativeLibs (Thread[#114,included builds,5,main]) started.
+:app:mergeDebugNativeLibs (Thread[#114,included builds,5,main]) started.
+
+> Task :app:checkDebugDuplicateClasses
+Caching disabled for task ':app:checkDebugDuplicateClasses' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:checkDebugDuplicateClasses' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:mergeExtDexDebug (Thread[#121,Execution worker Thread 7,5,main]) started.
+:app:mergeExtDexDebug (Thread[#121,Execution worker Thread 7,5,main]) started.
+Resolve mutations for :app:mergeLibDexDebug (Thread[#127,Execution worker Thread 13,5,main]) started.
+:app:mergeLibDexDebug (Thread[#127,Execution worker Thread 13,5,main]) started.
+Resolve mutations for :app:validateSigningDebug (Thread[#128,Execution worker Thread 14,5,main]) started.
+:app:validateSigningDebug (Thread[#117,Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeLibDexDebug
+Caching disabled for task ':app:mergeLibDexDebug' because:
+  Build cache is disabled
+Task ':app:mergeLibDexDebug' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:mergeLibDexDebug'.
+
+> Task :app:mergeDebugNativeLibs
+Caching disabled for task ':app:mergeDebugNativeLibs' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:mergeDebugNativeLibs' is not up-to-date because:
+  No history is available.
+
+> Task :app:validateSigningDebug
+Caching disabled for task ':app:validateSigningDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:validateSigningDebug' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:stripDebugDebugSymbols (Thread[#117,Execution worker Thread 3,5,main]) started.
+:app:stripDebugDebugSymbols (Thread[#117,Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:writeDebugAppMetadata (Thread[#114,included builds,5,main]) started.
+:app:writeDebugAppMetadata (Thread[#114,included builds,5,main]) started.
+
+> Task :app:writeDebugAppMetadata
+Caching disabled for task ':app:writeDebugAppMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:writeDebugAppMetadata' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[#114,included builds,5,main]) started.
+:app:writeDebugSigningConfigVersions (Thread[#114,included builds,5,main]) started.
+
+> Task :app:writeDebugSigningConfigVersions
+Caching disabled for task ':app:writeDebugSigningConfigVersions' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:writeDebugSigningConfigVersions' is not up-to-date because:
+  No history is available.
+
+> Task :app:processDebugManifestForPackage
+Custom actions are attached to task ':app:processDebugManifestForPackage'.
+Caching disabled for task ':app:processDebugManifestForPackage' because:
+  Build cache is disabled
+Task ':app:processDebugManifestForPackage' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:processDebugResources (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:processDebugResources (Thread[#118,Execution worker Thread 4,5,main]) started.
+
+> Task :app:stripDebugDebugSymbols
+Caching disabled for task ':app:stripDebugDebugSymbols' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:stripDebugDebugSymbols' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:stripDebugDebugSymbols'.
+C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\16683\AppData\Local\Android\Sdk
+C/C++: sdkFolder is C:\Users\16683\AppData\Local\Android\Sdk
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is C:\Users\16683\AppData\Local\Android\Sdk
+C/C++: sdkFolder is C:\Users\16683\AppData\Local\Android\Sdk
+Starting process 'command 'C:\Users\16683\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip''. Working directory: C:\Users\16683\AndroidStudioProjects\PiVech3\app Command: C:\Users\16683\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip --strip-unneeded -o C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\stripped_native_libs\debug\stripDebugDebugSymbols\out\lib\armeabi-v7a\libjingle_peerconnection_so.so C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_native_libs\debug\mergeDebugNativeLibs\out\lib\armeabi-v7a\libjingle_peerconnection_so.so
+Starting process 'command 'C:\Users\16683\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip''. Working directory: C:\Users\16683\AndroidStudioProjects\PiVech3\app Command: C:\Users\16683\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip --strip-unneeded -o C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\stripped_native_libs\debug\stripDebugDebugSymbols\out\lib\arm64-v8a\libjingle_peerconnection_so.so C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_native_libs\debug\mergeDebugNativeLibs\out\lib\arm64-v8a\libjingle_peerconnection_so.so
+Starting process 'command 'C:\Users\16683\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip''. Working directory: C:\Users\16683\AndroidStudioProjects\PiVech3\app Command: C:\Users\16683\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip --strip-unneeded -o C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\stripped_native_libs\debug\stripDebugDebugSymbols\out\lib\x86\libjingle_peerconnection_so.so C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_native_libs\debug\mergeDebugNativeLibs\out\lib\x86\libjingle_peerconnection_so.so
+Starting process 'command 'C:\Users\16683\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip''. Working directory: C:\Users\16683\AndroidStudioProjects\PiVech3\app Command: C:\Users\16683\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip --strip-unneeded -o C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\stripped_native_libs\debug\stripDebugDebugSymbols\out\lib\x86_64\libjingle_peerconnection_so.so C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\merged_native_libs\debug\mergeDebugNativeLibs\out\lib\x86_64\libjingle_peerconnection_so.so
+Successfully started process 'command 'C:\Users\16683\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip''
+Successfully started process 'command 'C:\Users\16683\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip''
+Successfully started process 'command 'C:\Users\16683\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip''
+Successfully started process 'command 'C:\Users\16683\AppData\Local\Android\Sdk\ndk\27.0.12077973\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-strip''
+
+> Task :app:mergeExtDexDebug
+Caching disabled for task ':app:mergeExtDexDebug' because:
+  Build cache is disabled
+Task ':app:mergeExtDexDebug' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:mergeExtDexDebug'.
+Merging to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\dex\debug\mergeExtDexDebug' with D8 from all or a subset of dex files in C:\Users\16683\.gradle\caches\8.13\transforms\c1e52c926950de6c15e896ad8ba8f1b3\transformed\viewbinding-8.13.2-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\f31df67636e312daff2a81d72926c3e1\transformed\navigation-common-2.6.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\19f0473b2f5c46686f84b086bea0b3e1\transformed\navigation-runtime-2.6.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\eb824cbd08fd8473eaf85c663ececd0d\transformed\navigation-fragment-2.6.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\e1806b875dc88d21a43f1a192eef3ce0\transformed\navigation-ui-2.6.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\164403c2e9d1b4bce637ea57e62ae7d0\transformed\material-1.10.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\6b00a9eaa5f63b1437254fb6f6a110ef\transformed\constraintlayout-2.1.4-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\e958255151aaff91b8151ab030a7840c\transformed\appcompat-resources-1.6.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\ef04dff7a9d884343ee92494eb64edee\transformed\preference-ktx-1.2.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\375eba22870ff9bc674e1438abf8db37\transformed\preference-1.2.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\a16251a80a814ee6f9848dc9e3273ad1\transformed\appcompat-1.6.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\b1fcdcebe6526f2e2e75e74a630ed2a1\transformed\emoji2-views-helper-1.2.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\ede20f48e99187d61fbeaa405f7b1314\transformed\emoji2-1.2.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\836d87c346286f50946349e014bc372a\transformed\viewpager2-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\15be5ec278847282f1cba4b592c26e36\transformed\fragment-1.6.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\4ed0cfe47e41f3aa1ffe28422d14d1d3\transformed\fragment-ktx-1.6.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\bcd167687e99d2356c1f264dc6ded78c\transformed\activity-ktx-1.8.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\dc180151f657974a5f34e5bd9681dddb\transformed\activity-1.8.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\dbcf497ad78e0cd83d3cae2ad06bd341\transformed\drawerlayout-1.1.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\4945aa91d0cafab096dd283c2c1fb1f3\transformed\coordinatorlayout-1.1.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\115672e3396db8b6acd72eede93cb753\transformed\dynamicanimation-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\686e1dc1046be1a793f13d4fb9f3e4d7\transformed\vectordrawable-animated-1.1.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\09e04db65fbfbbc97ff122b43fbb32f7\transformed\vectordrawable-1.1.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\dd3021526844b3ce7d4069f15169993c\transformed\legacy-support-core-utils-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\ea972de7c4315757fd26c5a66597feb5\transformed\loader-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\30fb6a0b3dbb473059e731da587c9528\transformed\recyclerview-1.1.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\8f1ab9e73ace087eab01304ba92a44e8\transformed\slidingpanelayout-1.2.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\515a0a6f5a22ef1da9b0f8b1f765fbfa\transformed\viewpager-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\15f279cd80e510079ce87f05cd289153\transformed\customview-1.1.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\6008b46235360b0418c0274fdf89930f\transformed\transition-1.4.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\9f555c4ef57b593056d49e3ccd3e9c94\transformed\window-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\8544006ddfd949a3b90f827a2d8cdd95\transformed\core-1.10.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\6fac2d61c21e21484d8fe4a3b86644b0\transformed\savedstate-ktx-1.2.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\317403b9f5f6c5bccde1755dff5be3b1\transformed\savedstate-1.2.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\b4a166f04a10e4e0ef4ffd6c1b72e2aa\transformed\lifecycle-runtime-ktx-2.6.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\f7c82120b9fadc1ec07f6f77c29931da\transformed\lifecycle-common-2.6.1, C:\Users\16683\.gradle\caches\8.13\transforms\c6c5d2f33e839f897192facd81078673\transformed\lifecycle-livedata-core-2.6.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\0ebf7f5d56dc6bf9886b5e2f3a6e49e0\transformed\lifecycle-process-2.6.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\e4766d9c9bf971391b6cdc5e8d9efd72\transformed\lifecycle-livedata-core-ktx-2.6.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\f746d974d302b9b0b80f72bfd9d89d26\transformed\lifecycle-livedata-2.6.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\e31c4c0fd72d0319c2725467d2cab88c\transformed\lifecycle-viewmodel-2.6.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\acb5a502c7fa71d34d3955d738dd2d74\transformed\lifecycle-runtime-2.6.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\de45635b710b16ffaa7db18b6e300874\transformed\lifecycle-livedata-ktx-2.6.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\4519e2ab1ab5431fc59a118671a1d7e9\transformed\lifecycle-viewmodel-ktx-2.6.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\ac12c8c1e95c7c7baca7f4ab2bf92d13\transformed\lifecycle-viewmodel-savedstate-2.6.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\d03eadc6f361a6d5a892328f18c04b5b\transformed\core-ktx-1.10.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\4adf928d7db4e9fd60d6b908e1be23c2\transformed\annotation-experimental-1.3.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\4cf88242cdffce81252c717444aca39f\transformed\cursoradapter-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\f139ede549c00eb608a3674f062ac917\transformed\resourceinspection-annotation-1.0.1, C:\Users\16683\.gradle\caches\8.13\transforms\d1fca5d82091e1c5a6d7589027a3c8ef\transformed\cardview-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\456937eb7769b90e8cc1789802e28d00\transformed\interpolator-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\f84161c4855027e26f9d7d2333d5715c\transformed\versionedparcelable-1.1.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\548c734208ae001179fd62fde8a05409\transformed\collection-ktx-1.1.0, C:\Users\16683\.gradle\caches\8.13\transforms\35dd019e551768012c5c0356f88f27ec\transformed\collection-1.1.0, C:\Users\16683\.gradle\caches\8.13\transforms\21c750b46f5ac2936eeaebd28c1274a9\transformed\profileinstaller-1.3.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\18996e856f40e463818a06b1ae642e7a\transformed\startup-runtime-1.1.1-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\a1530494a0ec12ce64bcbf1f39aa4698\transformed\tracing-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\dc8f3174651f5fe101a1bb7420112f3c\transformed\core-runtime-2.2.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\c1654a88f5055203dc2e0b92c5c9bd6a\transformed\core-common-2.2.0, C:\Users\16683\.gradle\caches\8.13\transforms\346cb09bebc845c7c9dd1608313a8a88\transformed\concurrent-futures-1.1.0, C:\Users\16683\.gradle\caches\8.13\transforms\72cb26839dcccffc250d2d261766d73c\transformed\documentfile-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\b28911c90ddcc90bb7de8cdc57fb4a6b\transformed\localbroadcastmanager-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\87f03017cad596d1ad9e4ddc2b7117b4\transformed\print-1.0.0-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\9986dc461a40c9307109e8eea50ed806\transformed\annotation-jvm-1.6.0, C:\Users\16683\.gradle\caches\8.13\transforms\1bd4487bcbbb906206c69de9b39b42fc\transformed\okhttp-4.12.0, C:\Users\16683\.gradle\caches\8.13\transforms\e42df85fa98375f901383b6ef42e0b43\transformed\kotlinx-coroutines-core-jvm-1.6.4, C:\Users\16683\.gradle\caches\8.13\transforms\8ae418a33e72f24436c69c3562eda47e\transformed\kotlinx-coroutines-android-1.6.4, C:\Users\16683\.gradle\caches\8.13\transforms\b99c8e33b494ccaa7edadf9135f9b8a8\transformed\okio-jvm-3.6.0, C:\Users\16683\.gradle\caches\8.13\transforms\e9914ded9f955a1ec8dd6bc62ff6537e\transformed\kotlin-stdlib-2.0.21, C:\Users\16683\.gradle\caches\8.13\transforms\70eca6f87d98e54361dcf07e7f984d79\transformed\android-104.5112.06-runtime, C:\Users\16683\.gradle\caches\8.13\transforms\86a97306c66d04f100a8889cbc0b58e6\transformed\annotations-13.0, C:\Users\16683\.gradle\caches\8.13\transforms\bc395bb8c2b67ae86a5fb537526f3c86\transformed\error_prone_annotations-2.15.0, C:\Users\16683\.gradle\caches\8.13\transforms\4cb55099eebe26b60dd65392f42bde56\transformed\constraintlayout-core-1.0.4, C:\Users\16683\.gradle\caches\8.13\transforms\3d8692596ebafd4dcf44082687b25bff\transformed\listenablefuture-1.0, and from all global synthetics files in 
+
+> Task :app:processDebugResources
+Caching disabled for task ':app:processDebugResources' because:
+  Build cache is disabled
+Task ':app:processDebugResources' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:processDebugResources'.
+AAPT2 aapt2-8.13.2-14304508-windows Daemon #0: starting
+Aapt output file C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\linked_resources_binary_format\debug\processDebugResources\linked-resources-binary-format-debug.ap_
+Resolve mutations for :app:compileDebugKotlin (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:compileDebugKotlin (Thread[#118,Execution worker Thread 4,5,main]) started.
+
+> Task :app:compileDebugKotlin
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileDebugAndroidTestKotlin
+Caching disabled for task ':app:compileDebugKotlin' because:
+  Build cache is disabled
+Task ':app:compileDebugKotlin' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:compileDebugKotlin'.
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\kotlin', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+Kotlin source files: C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\java\com\example\pivech3\MainActivity.kt, C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\java\com\example\pivech3\prefs\AppPreferences.kt, C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\java\com\example\pivech3\ui\control\ControlFragment.kt, C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\java\com\example\pivech3\ui\control\ControlViewModel.kt, C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\java\com\example\pivech3\ui\home\HomeFragment.kt, C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\java\com\example\pivech3\ui\home\HomeViewModel.kt, C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\java\com\example\pivech3\ui\home\JoystickView.kt, C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\java\com\example\pivech3\ui\settings\SettingsFragment.kt, C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\java\com\example\pivech3\ui\slideshow\SlideshowFragment.kt, C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\java\com\example\pivech3\ui\slideshow\SlideshowViewModel.kt, C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\java\com\example\pivech3\utils\StatusBarUtils.kt
+Java source files: C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\pivech3\databinding\ActivityMainBinding.java, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\pivech3\databinding\AppBarMainBinding.java, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\pivech3\databinding\ContentMainBinding.java, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\pivech3\databinding\FragmentControlBinding.java, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\pivech3\databinding\FragmentHomeBinding.java, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\pivech3\databinding\FragmentSlideshowBinding.java, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\generated\data_binding_base_class_source_out\debug\out\com\example\pivech3\databinding\NavHeaderMainBinding.java
+Script source files: 
+Script file extensions: 
+Using Kotlin/JVM incremental compilation
+[KOTLIN] Kotlin compilation 'jdkHome' argument: null
+i: starting the daemon as: C:\Program Files\Android\Android Studio\jbr\bin\java -cp C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-compiler-embeddable\2.0.21\79346ed53db48b18312a472602eb5c057070c54d\kotlin-compiler-embeddable-2.0.21.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\2.0.21\618b539767b4899b4660a83006e052b63f1db551\kotlin-stdlib-2.0.21.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-script-runtime\2.0.21\c9b044380ad41f89aa89aa896c2d32a8c0b2129d\kotlin-script-runtime-2.0.21.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-reflect\1.6.10\1cbe9c92c12a94eea200d23c2bbaedaf3daf5132\kotlin-reflect-1.6.10.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-daemon-embeddable\2.0.21\c9e933b23287de9b5a17e2116b4657bb91aea72c\kotlin-daemon-embeddable-2.0.21.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.intellij.deps\trove4j\1.0.20200330\3afb14d5f9ceb459d724e907a21145e8ff394f02\trove4j-1.0.20200330.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-core-jvm\1.6.4\2c997cd1c0ef33f3e751d3831929aeff1390cb30\kotlinx-coroutines-core-jvm-1.6.4.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar -Djava.awt.headless=true -Djava.rmi.server.hostname=127.0.0.1 -Xmx2048m -XX:ReservedCodeCacheSize=320m -Dkotlin.environment.keepalive -ea -XX:+UseCodeCacheFlushing -XX:+UseParallelGC --add-exports java.base/sun.nio.ch=ALL-UNNAMED org.jetbrains.kotlin.daemon.KotlinCompileDaemon --daemon-runFilesPath C:\Users\16683\AppData\Local\kotlin\daemon --daemon-autoshutdownIdleSeconds=7200 --daemon-compilerClasspath C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-compiler-embeddable\2.0.21\79346ed53db48b18312a472602eb5c057070c54d\kotlin-compiler-embeddable-2.0.21.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\2.0.21\618b539767b4899b4660a83006e052b63f1db551\kotlin-stdlib-2.0.21.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-script-runtime\2.0.21\c9b044380ad41f89aa89aa896c2d32a8c0b2129d\kotlin-script-runtime-2.0.21.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-reflect\1.6.10\1cbe9c92c12a94eea200d23c2bbaedaf3daf5132\kotlin-reflect-1.6.10.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-daemon-embeddable\2.0.21\c9e933b23287de9b5a17e2116b4657bb91aea72c\kotlin-daemon-embeddable-2.0.21.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.intellij.deps\trove4j\1.0.20200330\3afb14d5f9ceb459d724e907a21145e8ff394f02\trove4j-1.0.20200330.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-core-jvm\1.6.4\2c997cd1c0ef33f3e751d3831929aeff1390cb30\kotlinx-coroutines-core-jvm-1.6.4.jar;C:\Users\16683\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar
+i: #1 retrying connecting to the daemon 
+Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\kotlin\compileDebugKotlin\cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\kotlin\compileDebugKotlin\local-state\build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\tmp\kotlin-classes\debug, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\kotlin\compileDebugKotlin\cacheable, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\kotlin\compileDebugKotlin\local-state])
+w: file:///C:/Users/16683/AndroidStudioProjects/PiVech3/app/src/main/java/com/example/pivech3/utils/StatusBarUtils.kt:24:22 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/16683/AndroidStudioProjects/PiVech3/app/src/main/java/com/example/pivech3/utils/StatusBarUtils.kt:43:55 'static field FLAG_TRANSLUCENT_STATUS: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/16683/AndroidStudioProjects/PiVech3/app/src/main/java/com/example/pivech3/utils/StatusBarUtils.kt:44:17 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+Finished executing kotlin compiler using DAEMON strategy
+Resolve mutations for :app:compileDebugJavaWithJavac (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:compileDebugJavaWithJavac (Thread[#118,Execution worker Thread 4,5,main]) started.
+
+> Task :app:compileDebugJavaWithJavac
+Custom actions are attached to task ':app:compileDebugJavaWithJavac'.
+Caching disabled for task ':app:compileDebugJavaWithJavac' because:
+  Build cache is disabled
+Task ':app:compileDebugJavaWithJavac' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:compileDebugJavaWithJavac'.
+Compilation mode: in-process compilation
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain 'C:\Program Files\Android\Android Studio\jbr'.
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\java', not found
+Compiling with JDK Java compiler API.
+Class dependency analysis for incremental compilation took 0.014 secs.
+Created classpath snapshot for incremental compilation in 0.149 secs.
+Resolve mutations for :app:processDebugJavaRes (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:processDebugJavaRes (Thread[#118,Execution worker Thread 4,5,main]) started.
+
+> Task :app:processDebugJavaRes
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\resources', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\resources', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\resources', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\resources', not found
+Caching disabled for task ':app:processDebugJavaRes' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:processDebugJavaRes' is not up-to-date because:
+  No history is available.
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\resources', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\resources', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\main\resources', not found
+file or directory 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\src\debug\resources', not found
+Resolve mutations for :app:mergeDebugJavaResource (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:mergeDebugJavaResource (Thread[#118,Execution worker Thread 4,5,main]) started.
+Resolve mutations for :app:dexBuilderDebug (Thread[#116,Execution worker Thread 2,5,main]) started.
+:app:dexBuilderDebug (Thread[#116,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeDebugJavaResource
+Caching disabled for task ':app:mergeDebugJavaResource' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:mergeDebugJavaResource' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:mergeDebugJavaResource'.
+
+> Task :app:dexBuilderDebug
+Caching disabled for task ':app:dexBuilderDebug' because:
+  Build cache is disabled
+Task ':app:dexBuilderDebug' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:dexBuilderDebug'.
+Dex builder is incremental : false 
+Processing input C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\tmp\kotlin-classes\debug
+Processing input C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes
+Dexing C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\tmp\kotlin-classes\debug
+Dexing C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes
+Processing input C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar
+Dexing C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_0.jar'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\tmp\kotlin-classes\debug' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\tmp\kotlin-classes\debug' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\tmp\kotlin-classes\debug' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_2.jar'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_1.jar'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\tmp\kotlin-classes\debug' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\tmp\kotlin-classes\debug' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\tmp\kotlin-classes\debug' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\tmp\kotlin-classes\debug' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\tmp\kotlin-classes\debug' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_3.jar'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\javac\debug\compileDebugJavaWithJavac\classes' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_4.jar'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_5.jar'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_7.jar'
+Dexing 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\debug\processDebugResources\R.jar' to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_6.jar'
+Done with all dex archive conversions
+Resolve mutations for :app:mergeProjectDexDebug (Thread[#120,Execution worker Thread 6,5,main]) started.
+:app:mergeProjectDexDebug (Thread[#120,Execution worker Thread 6,5,main]) started.
+
+> Task :app:mergeProjectDexDebug
+Caching disabled for task ':app:mergeProjectDexDebug' because:
+  Build cache is disabled
+Task ':app:mergeProjectDexDebug' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:mergeProjectDexDebug'.
+Merging to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\dex\debug\mergeProjectDexDebug\3' with D8 from all or a subset of dex files in C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Merging to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\dex\debug\mergeProjectDexDebug\4' with D8 from all or a subset of dex files in C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Merging to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\dex\debug\mergeProjectDexDebug\5' with D8 from all or a subset of dex files in C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Merging to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\dex\debug\mergeProjectDexDebug\0' with D8 from all or a subset of dex files in C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_0.jar, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_1.jar, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_2.jar, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_3.jar, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_4.jar, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_5.jar, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_6.jar, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out\e8244e3d436134e9f6ba91f07cd81a419e487426d35971ce5a4c5c2442324a32_7.jar, and from all global synthetics files in 
+Merging to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\dex\debug\mergeProjectDexDebug\8' with D8 from all or a subset of dex files in C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Merging to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\dex\debug\mergeProjectDexDebug\10' with D8 from all or a subset of dex files in C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Merging to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\dex\debug\mergeProjectDexDebug\15' with D8 from all or a subset of dex files in C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Merging to 'C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\dex\debug\mergeProjectDexDebug\14' with D8 from all or a subset of dex files in C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, C:\Users\16683\AndroidStudioProjects\PiVech3\app\build\intermediates\project_dex_archive\debug\dexBuilderDebug\out, and from all global synthetics files in 
+Resolve mutations for :app:packageDebug (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:packageDebug (Thread[#118,Execution worker Thread 4,5,main]) started.
+
+> Task :app:packageDebug
+Custom actions are attached to task ':app:packageDebug'.
+Caching disabled for task ':app:packageDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:packageDebug' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:packageDebug'.
+Resolve mutations for :app:createDebugApkListingFileRedirect (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:createDebugApkListingFileRedirect (Thread[#118,Execution worker Thread 4,5,main]) started.
+
+> Task :app:createDebugApkListingFileRedirect
+Caching disabled for task ':app:createDebugApkListingFileRedirect' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:createDebugApkListingFileRedirect' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:assembleDebug (Thread[#118,Execution worker Thread 4,5,main]) started.
+:app:assembleDebug (Thread[#118,Execution worker Thread 4,5,main]) started.
+
+> Task :app:assembleDebug
+Skipping task ':app:assembleDebug' as it has no actions.
+AAPT2 aapt2-8.13.2-14304508-windows Daemon #0: shutdown
+
+BUILD SUCCESSFUL in 49s
+40 actionable tasks: 39 executed, 1 up-to-date
+Watched directory hierarchies: [C:\Users\16683\AndroidStudioProjects\PiVech3]

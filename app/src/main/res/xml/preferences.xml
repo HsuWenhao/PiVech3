@@ -7,9 +7,9 @@
         android:inputType="text" />
 
     <EditTextPreference
-        android:key="rtsp_url"
-        android:title="RTSP 推流地址"
-        android:summary="请输入 RTSP 地址，例如 rtsp://192.168.1.10:8554/wmv"
-        android:defaultValue="rtsp://192.168.1.10:8554/wmv"
+        android:key="webrtc_url"
+        android:title="WebRTC 播放地址"
+        android:summary="请输入 WebRTC 播放地址，例如 http://192.168.1.3:8889/wmv"
+        android:defaultValue="http://192.168.1.3:8889/wmv"
         android:inputType="textUri" />
 </PreferenceScreen>

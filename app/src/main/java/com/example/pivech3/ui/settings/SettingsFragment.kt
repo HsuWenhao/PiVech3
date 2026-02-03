@@ -13,7 +13,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         findPreference<EditTextPreference>("raspberry_pi_ip")
             ?.summaryProvider = EditTextPreference.SimpleSummaryProvider.getInstance()
 
-        findPreference<EditTextPreference>("rtsp_url")
+        findPreference<EditTextPreference>("webrtc_url")
             ?.summaryProvider = EditTextPreference.SimpleSummaryProvider.getInstance()
     }
 }
