@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">PiVech3</string>
+    <string name="app_name">PiV 3.0</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">PiV 3.0</string>
+    <string name="nav_header_subtitle">noodleportal@foxmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -11,7 +11,7 @@
     <string name="menu_control">Control</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="slider_value">Value: %1$d</string>
-    <string name="slider_value_alert">当前数值: %1$d</string>
+    <string name="slider_value_alert">Current value: %1$d</string>
     <string name="joystick">Joystick</string>
     <string name="joystick_value">Joystick: x=%1$.2f, y=%2$.2f</string>
     <string name="cd_fab">Action</string>
@@ -20,5 +20,5 @@
     <string name="joystick_vector_value">Vector: |v|=%1$.2f</string>
     <string name="joystick_x_value">x: %1$.2f</string>
     <string name="joystick_y_value">y: %1$.2f</string>
-    <string name="exit">退出</string>
+    <string name="exit">exit</string>
 </resources>
