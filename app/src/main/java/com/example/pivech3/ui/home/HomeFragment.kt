@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.pivech3.R
 import com.example.pivech3.databinding.FragmentHomeBinding
+import kotlin.math.hypot
 
 class HomeFragment : Fragment() {
 
@@ -60,10 +61,37 @@ class HomeFragment : Fragment() {
         })
 
         // Joystick + live value label
-        val joystickValueLabel = binding.joystickValueLabel
-        joystickValueLabel.text = getString(R.string.joystick_value, 0f, 0f)
+        val joystickVectorValue = binding.joystickVectorValue
+        val joystickXValue = binding.joystickXValue
+        val joystickYValue = binding.joystickYValue
+
+        fun renderJoystick(x: Float, y: Float) {
+            joystickXValue.text = getString(R.string.joystick_x_value, x)
+            joystickYValue.text = getString(R.string.joystick_y_value, y)
+            val mag = hypot(x.toDouble(), y.toDouble()).toFloat()
+            joystickVectorValue.text = getString(R.string.joystick_vector_value, mag)
+        }
+
+        renderJoystick(0f, 0f)
         binding.joystickView.setOnMoveListener { x, y ->
-            joystickValueLabel.text = getString(R.string.joystick_value, x, y)
+            renderJoystick(x, y)
+        }
+
+        // Joystick2 + live value label (independent)
+        val joystickVectorValue2 = binding.joystickVectorValue2
+        val joystickXValue2 = binding.joystickXValue2
+        val joystickYValue2 = binding.joystickYValue2
+
+        fun renderJoystick2(x: Float, y: Float) {
+            joystickXValue2.text = getString(R.string.joystick_x_value, x)
+            joystickYValue2.text = getString(R.string.joystick_y_value, y)
+            val mag = hypot(x.toDouble(), y.toDouble()).toFloat()
+            joystickVectorValue2.text = getString(R.string.joystick_vector_value, mag)
+        }
+
+        renderJoystick2(0f, 0f)
+        binding.joystickView2.setOnMoveListener { x, y ->
+            renderJoystick2(x, y)
         }
 
         return root

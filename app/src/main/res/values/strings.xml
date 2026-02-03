@@ -15,4 +15,9 @@
     <string name="joystick">Joystick</string>
     <string name="joystick_value">Joystick: x=%1$.2f, y=%2$.2f</string>
     <string name="cd_fab">Action</string>
+
+    <string name="joystick_vector_title">Joystick Vector</string>
+    <string name="joystick_vector_value">Vector: |v|=%1$.2f</string>
+    <string name="joystick_x_value">x: %1$.2f</string>
+    <string name="joystick_y_value">y: %1$.2f</string>
 </resources>
