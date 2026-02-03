@@ -33,6 +33,7 @@ import org.webrtc.RtpTransceiver.RtpTransceiverInit
 import org.webrtc.SdpObserver
 import org.webrtc.SessionDescription
 import org.webrtc.VideoTrack
+import androidx.core.net.toUri
 
 class ControlFragment : Fragment() {
 
@@ -161,7 +162,7 @@ class ControlFragment : Fragment() {
     }
 
     private fun parseBaseAndPath(): Pair<String, String> {
-        val uri = android.net.Uri.parse(streamUrl)
+        val uri = streamUrl.toUri()
         val base = "${uri.scheme}://${uri.host}${if (uri.port != -1) ":${uri.port}" else ""}"
         val path = uri.pathSegments.firstOrNull().orEmpty()
         return base to path
