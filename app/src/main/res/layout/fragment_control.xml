@@ -56,8 +56,13 @@
         android:paddingEnd="12dp"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
-        android:text="✕"
-        android:textSize="18sp"
+        android:contentDescription="@string/exit"
+        app:icon="@android:drawable/ic_menu_close_clear_cancel"
+        app:iconTint="?attr/colorOnSurface"
+        app:iconSize="20dp"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        android:text=""
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
