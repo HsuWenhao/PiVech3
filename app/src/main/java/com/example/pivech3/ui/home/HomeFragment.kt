@@ -1,6 +1,7 @@
 package com.example.pivech3.ui.home
 
 import android.os.Bundle
+import android.os.SystemClock
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.pivech3.R
+import com.example.pivech3.control.TankDriveMixer
 import com.example.pivech3.databinding.FragmentHomeBinding
+import com.example.pivech3.net.RaspberryPiMotionWsClient
+import com.example.pivech3.prefs.AppPreferences
 import kotlin.math.hypot
 
 class HomeFragment : Fragment() {
@@ -20,6 +24,11 @@ class HomeFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    private val motionWsClient = RaspberryPiMotionWsClient()
+    private var lastSendAtMs: Long = 0L
+    private var lastSentLeft: Int? = null
+    private var lastSentRight: Int? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -64,12 +73,39 @@ class HomeFragment : Fragment() {
         val joystickVectorValue = binding.joystickVectorValue
         val joystickXValue = binding.joystickXValue
         val joystickYValue = binding.joystickYValue
+        val motorLeftSpeedValue = binding.motorLeftSpeedValue
+        val motorRightSpeedValue = binding.motorRightSpeedValue
+
+        fun ensureMotionWsConnected() {
+            val url = AppPreferences.getMotionControlWsUrl(requireContext()) ?: return
+            motionWsClient.connect(url)
+        }
+
+        fun maybeSendMotorSpeeds(left: Int, right: Int) {
+            val now = SystemClock.elapsedRealtime()
+            // Basic throttle: max ~20Hz, also avoid sending duplicates.
+            if (now - lastSendAtMs < 50) return
+            if (lastSentLeft == left && lastSentRight == right) return
+
+            ensureMotionWsConnected()
+            if (motionWsClient.sendMotorSpeeds(left, right)) {
+                lastSendAtMs = now
+                lastSentLeft = left
+                lastSentRight = right
+            }
+        }
 
         fun renderJoystick(x: Float, y: Float) {
             joystickXValue.text = getString(R.string.joystick_x_value, x)
             joystickYValue.text = getString(R.string.joystick_y_value, y)
             val mag = hypot(x.toDouble(), y.toDouble()).toFloat()
             joystickVectorValue.text = getString(R.string.joystick_vector_value, mag)
+
+            val speeds = TankDriveMixer.mix(x, y)
+            motorLeftSpeedValue.text = getString(R.string.motor_left_speed, speeds.left)
+            motorRightSpeedValue.text = getString(R.string.motor_right_speed, speeds.right)
+
+            maybeSendMotorSpeeds(speeds.left, speeds.right)
         }
 
         renderJoystick(0f, 0f)
@@ -99,6 +135,7 @@ class HomeFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        motionWsClient.close()
         _binding = null
     }
 }

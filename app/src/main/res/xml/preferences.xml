@@ -8,6 +8,13 @@
         android:inputType="text" />
 
     <EditTextPreference
+        android:key="motion_control_port"
+        android:title="@string/pref_motion_control_port_title"
+        android:summary="@string/pref_motion_control_port_summary"
+        android:defaultValue="8000"
+        android:inputType="number" />
+
+    <EditTextPreference
         android:key="webrtc_url"
         android:title="@string/pref_webrtc_url_title"
         android:summary="@string/pref_webrtc_url_summary"

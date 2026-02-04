@@ -34,7 +34,13 @@
     <string name="pref_raspberry_pi_ip_title">树莓派局域网 IP</string>
     <string name="pref_raspberry_pi_ip_summary">请输入树莓派的局域网 IP 地址</string>
 
+    <string name="pref_motion_control_port_title">运动控制服务端口</string>
+    <string name="pref_motion_control_port_summary">用于运动控制服务的 WebSocket 端口（默认 8000）</string>
+
     <string name="pref_webrtc_url_title">WebRTC 播放地址</string>
     <string name="pref_webrtc_url_summary">请输入 WebRTC 播放地址，例如 http://192.168.1.3:8889/wmv</string>
     <string name="pref_webrtc_url_default">http://192.168.1.3:8889/wmv</string>
+
+    <string name="motor_left_speed">左电机: %1$d</string>
+    <string name="motor_right_speed">右电机: %1$d</string>
 </resources>

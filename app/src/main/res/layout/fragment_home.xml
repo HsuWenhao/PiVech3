@@ -98,6 +98,22 @@
                 android:text="@string/joystick_y_value"
                 android:textSize="14sp" />
 
+            <TextView
+                android:id="@+id/motorLeftSpeedValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/motor_left_speed"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/motorRightSpeedValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/motor_right_speed"
+                android:textSize="14sp" />
+
         </LinearLayout>
     </LinearLayout>
 

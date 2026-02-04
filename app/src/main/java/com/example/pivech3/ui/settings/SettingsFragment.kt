@@ -13,6 +13,17 @@ class SettingsFragment : PreferenceFragmentCompat() {
         findPreference<EditTextPreference>("raspberry_pi_ip")
             ?.summaryProvider = EditTextPreference.SimpleSummaryProvider.getInstance()
 
+        findPreference<EditTextPreference>("motion_control_port")
+            ?.apply {
+                summaryProvider = EditTextPreference.SimpleSummaryProvider.getInstance()
+                setOnPreferenceChangeListener { _, newValue ->
+                    val raw = (newValue as? String)?.trim().orEmpty()
+                    val port = raw.toIntOrNull()
+                    // Reject invalid values; keep old.
+                    port != null && port in 1..65535
+                }
+            }
+
         findPreference<EditTextPreference>("webrtc_url")
             ?.summaryProvider = EditTextPreference.SimpleSummaryProvider.getInstance()
     }

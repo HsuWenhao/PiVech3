@@ -26,7 +26,14 @@
     <string name="pref_raspberry_pi_ip_title">Raspberry Pi LAN IP</string>
     <string name="pref_raspberry_pi_ip_summary">Enter the Raspberry Pi LAN IP address</string>
 
+    <string name="pref_motion_control_port_title">Motion control port</string>
+    <string name="pref_motion_control_port_summary">WebSocket port for motion control service (default 8000)</string>
+
     <string name="pref_webrtc_url_title">WebRTC playback URL</string>
     <string name="pref_webrtc_url_summary">Enter the WebRTC playback URL, e.g. http://192.168.1.3:8889/wmv</string>
     <string name="pref_webrtc_url_default">http://192.168.1.3:8889/wmv</string>
+
+    <!-- Motor Speed -->
+    <string name="motor_left_speed">Left motor: %1$d</string>
+    <string name="motor_right_speed">Right motor: %1$d</string>
 </resources>
