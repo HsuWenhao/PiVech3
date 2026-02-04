@@ -16,4 +16,23 @@ class SettingsFragment : PreferenceFragmentCompat() {
         findPreference<EditTextPreference>("webrtc_url")
             ?.summaryProvider = EditTextPreference.SimpleSummaryProvider.getInstance()
     }
+
+    override fun onDisplayPreferenceDialog(preference: androidx.preference.Preference) {
+        // Ensure EditTextPreference persists even when the dialog is dismissed by tapping outside.
+        if (preference is EditTextPreference) {
+            val fm = parentFragmentManager
+            if (fm.findFragmentByTag(DIALOG_FRAGMENT_TAG) != null) return
+
+            val f = AutoSaveEditTextPreferenceDialog.newInstance(preference.key)
+            f.setTargetFragment(this, 0)
+            f.show(fm, DIALOG_FRAGMENT_TAG)
+            return
+        }
+
+        super.onDisplayPreferenceDialog(preference)
+    }
+
+    private companion object {
+        const val DIALOG_FRAGMENT_TAG = "androidx.preference.PreferenceFragment.DIALOG"
+    }
 }
