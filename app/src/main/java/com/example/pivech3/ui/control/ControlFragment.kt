@@ -116,11 +116,14 @@ class ControlFragment : Fragment() {
             "--network-caching=$cacheNetwork",
             "--live-caching=$cacheLive",
             "--rtsp-caching=$cacheRtsp",
+            "--file-caching=0",
+            "--udp-caching=0",
             "--clock-jitter=0",
             "--clock-synchro=0",
             "--drop-late-frames",
             "--skip-frames",
-            "--avcodec-fast"
+            "--avcodec-fast",
+            "--no-audio"
         ).apply {
             if (tcp) {
                 add("--rtsp-tcp")
@@ -149,11 +152,14 @@ class ControlFragment : Fragment() {
             addOption(":network-caching=$cacheNetwork")
             addOption(":live-caching=$cacheLive")
             addOption(":rtsp-caching=$cacheRtsp")
+            addOption(":file-caching=0")
+            addOption(":udp-caching=0")
             addOption(":clock-jitter=0")
             addOption(":clock-synchro=0")
             addOption(":drop-late-frames")
             addOption(":skip-frames")
             addOption(":avcodec-fast")
+            addOption(":no-audio")
         }
 
         mp.media = media
