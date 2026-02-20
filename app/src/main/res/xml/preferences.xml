@@ -15,10 +15,23 @@
         android:inputType="number" />
 
     <EditTextPreference
-        android:key="webrtc_url"
-        android:title="@string/pref_webrtc_url_title"
-        android:summary="@string/pref_webrtc_url_summary"
-        android:defaultValue="@string/pref_webrtc_url_default"
+        android:key="rtsp_cache_ms"
+        android:title="@string/pref_rtsp_cache_ms_title"
+        android:summary="@string/pref_rtsp_cache_ms_summary"
+        android:defaultValue="60"
+        android:inputType="number" />
+
+    <SwitchPreferenceCompat
+        android:key="rtsp_use_tcp"
+        android:title="@string/pref_rtsp_use_tcp_title"
+        android:summary="@string/pref_rtsp_use_tcp_summary"
+        android:defaultValue="false" />
+
+    <EditTextPreference
+        android:key="rtsp_url"
+        android:title="@string/pref_rtsp_url_title"
+        android:summary="@string/pref_rtsp_url_summary"
+        android:defaultValue="@string/pref_rtsp_url_default"
         android:inputType="textUri" />
 
 </PreferenceScreen>

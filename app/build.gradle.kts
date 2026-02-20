@@ -50,6 +50,14 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.preference)
 
+    // RTSP playback (Media3 ExoPlayer)
+    implementation(libs.androidx.media3.exoplayer)
+    implementation(libs.androidx.media3.exoplayer.rtsp)
+    implementation(libs.androidx.media3.ui)
+
+    // RTSP playback fallback (LibVLC) - VLC can play your stream, so this is the most compatible option.
+    implementation("org.videolan.android:libvlc-all:3.6.0")
+
     // WebRTC playback
     implementation("io.getstream:stream-webrtc-android:1.3.9") {
         // Avoid potential duplicate/older WebRTC artifacts dragged transitively.

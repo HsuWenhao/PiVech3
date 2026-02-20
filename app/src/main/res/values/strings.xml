@@ -29,9 +29,15 @@
     <string name="pref_motion_control_port_title">Motion control port</string>
     <string name="pref_motion_control_port_summary">WebSocket port for motion control service (default 8000)</string>
 
-    <string name="pref_webrtc_url_title">WebRTC playback URL</string>
-    <string name="pref_webrtc_url_summary">Enter the WebRTC playback URL, e.g. http://192.168.1.3:8889/wmv</string>
-    <string name="pref_webrtc_url_default">http://192.168.1.3:8889/wmv</string>
+    <string name="pref_rtsp_url_title">RTSP stream URL</string>
+    <string name="pref_rtsp_url_summary">Enter the RTSP stream URL, e.g. rtsp://192.168.0.1/live/tcp/ch1</string>
+    <string name="pref_rtsp_url_default">rtsp://192.168.0.1/live/tcp/ch1</string>
+
+    <string name="pref_rtsp_cache_ms_title">RTSP cache (ms)</string>
+    <string name="pref_rtsp_cache_ms_summary">Lower = less latency, higher = smoother. Suggested 40-80</string>
+
+    <string name="pref_rtsp_use_tcp_title">RTSP over TCP</string>
+    <string name="pref_rtsp_use_tcp_summary">Enable for stability on bad networks; disable for lower latency</string>
 
     <!-- Motor Speed -->
     <string name="motor_left_speed">Left motor: %1$d</string>

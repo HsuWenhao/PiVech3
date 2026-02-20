@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <!--
-      Control 页面会通过 OkHttp 访问设置项 webrtc_url（常见为局域网 http://192.168.x.x:8889/...）。
+      Control 页面会通过设置项 rtsp_url 播放 RTSP 流（例如 rtsp://192.168.x.x/...）。
       Android 9+ 默认禁止明文 HTTP：需要在这里显式放通。
 
       策略：只对私有网段/本地域放通 cleartext，公网仍按默认策略（通常只允许 https）。

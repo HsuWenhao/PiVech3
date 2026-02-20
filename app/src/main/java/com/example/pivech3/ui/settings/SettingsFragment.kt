@@ -24,7 +24,18 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 }
             }
 
-        findPreference<EditTextPreference>("webrtc_url")
+        findPreference<EditTextPreference>("rtsp_cache_ms")
+            ?.apply {
+                summaryProvider = EditTextPreference.SimpleSummaryProvider.getInstance()
+                setOnPreferenceChangeListener { _, newValue ->
+                    val raw = (newValue as? String)?.trim().orEmpty()
+                    val cache = raw.toIntOrNull()
+                    // Reject invalid values; keep old.
+                    cache != null && cache in 20..1000
+                }
+            }
+
+        findPreference<EditTextPreference>("rtsp_url")
             ?.summaryProvider = EditTextPreference.SimpleSummaryProvider.getInstance()
     }
 

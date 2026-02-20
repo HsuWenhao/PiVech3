@@ -4,16 +4,22 @@ import android.content.Context
 import androidx.preference.PreferenceManager
 
 object AppPreferences {
-    const val KEY_WEBRTC_URL = "webrtc_url"
-    const val DEFAULT_WEBRTC_URL = "http://192.168.1.3:8889/wmv"
+    const val KEY_RTSP_URL = "rtsp_url"
+    const val DEFAULT_RTSP_URL = "rtsp://192.168.0.1/live/tcp/ch1"
 
     const val KEY_RASPBERRY_PI_IP = "raspberry_pi_ip"
     const val KEY_MOTION_CONTROL_PORT = "motion_control_port"
     const val DEFAULT_MOTION_CONTROL_PORT = 8000
 
-    fun getWebRtcUrl(context: Context): String {
+    const val KEY_RTSP_CACHE_MS = "rtsp_cache_ms"
+    const val DEFAULT_RTSP_CACHE_MS = 60
+
+    const val KEY_RTSP_USE_TCP = "rtsp_use_tcp"
+    const val DEFAULT_RTSP_USE_TCP = false
+
+    fun getRtspUrl(context: Context): String {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        return prefs.getString(KEY_WEBRTC_URL, DEFAULT_WEBRTC_URL) ?: DEFAULT_WEBRTC_URL
+        return prefs.getString(KEY_RTSP_URL, DEFAULT_RTSP_URL) ?: DEFAULT_RTSP_URL
     }
 
     fun getRaspberryPiIp(context: Context): String {
@@ -30,6 +36,20 @@ object AppPreferences {
         return port.coerceIn(1, 65535)
     }
 
+    fun getRtspCacheMs(context: Context): Int {
+        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+        val raw = prefs.getString(KEY_RTSP_CACHE_MS, DEFAULT_RTSP_CACHE_MS.toString())
+            ?.trim()
+            .orEmpty()
+        val value = raw.toIntOrNull() ?: DEFAULT_RTSP_CACHE_MS
+        return value.coerceIn(20, 1000)
+    }
+
+    fun getRtspUseTcp(context: Context): Boolean {
+        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+        return prefs.getBoolean(KEY_RTSP_USE_TCP, DEFAULT_RTSP_USE_TCP)
+    }
+
     fun getMotionControlWsUrl(context: Context): String? {
         val ip = getRaspberryPiIp(context)
         if (ip.isBlank()) return null
@@ -37,13 +57,13 @@ object AppPreferences {
         return "ws://$ip:$port"
     }
 
-    fun migrateRtspToWebRtcIfNeeded(context: Context) {
+    fun migrateWebRtcToRtspIfNeeded(context: Context) {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        if (prefs.contains(KEY_WEBRTC_URL)) return
-        if (prefs.contains("rtsp_url")) {
-            val old = prefs.getString("rtsp_url", "")?.trim().orEmpty()
-            val value = if (old.startsWith("http")) old else DEFAULT_WEBRTC_URL
-            prefs.edit().putString(KEY_WEBRTC_URL, value).apply()
+        if (prefs.contains(KEY_RTSP_URL)) return
+        if (prefs.contains("webrtc_url")) {
+            val old = prefs.getString("webrtc_url", "")?.trim().orEmpty()
+            val value = if (old.startsWith("rtsp://")) old else DEFAULT_RTSP_URL
+            prefs.edit().putString(KEY_RTSP_URL, value).apply()
         }
     }
 }

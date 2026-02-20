@@ -37,9 +37,15 @@
     <string name="pref_motion_control_port_title">运动控制服务端口</string>
     <string name="pref_motion_control_port_summary">用于运动控制服务的 WebSocket 端口（默认 8000）</string>
 
-    <string name="pref_webrtc_url_title">WebRTC 播放地址</string>
-    <string name="pref_webrtc_url_summary">请输入 WebRTC 播放地址，例如 http://192.168.1.3:8889/wmv</string>
-    <string name="pref_webrtc_url_default">http://192.168.1.3:8889/wmv</string>
+    <string name="pref_rtsp_url_title">RTSP 推流地址</string>
+    <string name="pref_rtsp_url_summary">请输入 RTSP 推流地址，例如 rtsp://192.168.0.1/live/tcp/ch1</string>
+    <string name="pref_rtsp_url_default">rtsp://192.168.0.1/live/tcp/ch1</string>
+
+    <string name="pref_rtsp_cache_ms_title">RTSP 缓存（毫秒）</string>
+    <string name="pref_rtsp_cache_ms_summary">越低延迟越小，越高越流畅。建议 0-80</string>
+
+    <string name="pref_rtsp_use_tcp_title">RTSP 走 TCP</string>
+    <string name="pref_rtsp_use_tcp_summary">网络不稳定可打开；追求低延迟建议关闭</string>
 
     <string name="motor_left_speed">左电机: %1$d</string>
     <string name="motor_right_speed">右电机: %1$d</string>
